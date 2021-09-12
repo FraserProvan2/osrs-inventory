@@ -1,0 +1,348 @@
+{
+    "inventory":[
+       {
+          "id":20724,
+          "name":"Imbued heart",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":2434,
+          "name":"Prayer potion(4)",
+          "quantity":1,
+          "fuzzy":true,
+          "stackCompare":"None"
+       },
+       {
+          "id":2434,
+          "name":"Prayer potion(4)",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":12913,
+          "name":"Anti-venom+(4)",
+          "quantity":1,
+          "fuzzy":true,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":391,
+          "name":"Manta ray",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":3144,
+          "name":"Cooked karambwan",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":8013,
+          "name":"Teleport to house",
+          "quantity":8,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":12938,
+          "name":"Zul-andra teleport",
+          "quantity":2,
+          "fuzzy":false,
+          "stackCompare":"None"
+       }
+    ],
+    "equipment":[
+       {
+          "id":4856,
+          "name":"Ahrim\u0027s hood 100",
+          "quantity":1,
+          "fuzzy":true,
+          "stackCompare":"None"
+       },
+       {
+          "id":21791,
+          "name":"Imbued saradomin cape",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":12002,
+          "name":"Occult necklace",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":12899,
+          "name":"Trident of the swamp",
+          "quantity":1,
+          "fuzzy":true,
+          "stackCompare":"None"
+       },
+       {
+          "id":4870,
+          "name":"Ahrim\u0027s robetop 50",
+          "quantity":1,
+          "fuzzy":true,
+          "stackCompare":"None"
+       },
+       {
+          "id":12612,
+          "name":"Book of darkness",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":-1,
+          "name":"null",
+          "quantity":0,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":4876,
+          "name":"Ahrim\u0027s robeskirt 50",
+          "quantity":1,
+          "fuzzy":true,
+          "stackCompare":"None"
+       },
+       {
+          "id":-1,
+          "name":"null",
+          "quantity":0,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":19544,
+          "name":"Tormented bracelet",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":13235,
+          "name":"Eternal boots",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":-1,
+          "name":"null",
+          "quantity":0,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":20657,
+          "name":"Ring of suffering (ri)",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       {
+          "id":22945,
+          "name":"Rada\u0027s blessing 3",
+          "quantity":1,
+          "fuzzy":true,
+          "stackCompare":"None"
+       }
+    ],
+    "additionalFilteredItems":{
+       "560":{
+          "id":560,
+          "name":"Death rune",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       "562":{
+          "id":562,
+          "name":"Chaos rune",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       "12934":{
+          "id":12934,
+          "name":"Zulrah\u0027s scales",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       "2550":{
+          "id":2550,
+          "name":"Ring of recoil",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       },
+       "554":{
+          "id":554,
+          "name":"Fire rune",
+          "quantity":1,
+          "fuzzy":false,
+          "stackCompare":"None"
+       }
+    },
+    "name":"Zulrah",
+    "notes":"Rotation guide:\nnightfirecat.github.io/zulrahguide\n\nGreen -  Protect Range\nLight Blue - Protect Mage\nOrange - Protect none\n\nfully charghed tridant is \n2500   x death runes\n2500   x chaos runes\n12500 x fire runes\n2500   x scales",
+    "highlightColor":{
+       "value":-65536,
+       "falpha":0.0
+    },
+    "highlightDifference":false,
+    "filterBank":true,
+    "unorderedHighlight":false,
+    "spellBook":1,
+    "Id":9223372036854775807
+ }
