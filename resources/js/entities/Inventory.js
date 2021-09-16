@@ -1,5 +1,9 @@
+
+import newInventory from '../../new.json';
+
 export default class Inventory {
     constructor (obj = false) {
+        if (!obj) obj = newInventory;
         this.inventory = obj.inventory;
         this.equipment = obj.equipment;
         this.additionalFilteredItems = obj.additionalFilteredItems;

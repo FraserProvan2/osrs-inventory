@@ -1,0 +1,309 @@
+{
+    "inventory": [
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        }
+    ],
+    "equipment": [
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        }
+    ],
+    "additionalFilteredItems": {},
+    "name": "empty",
+    "notes": "",
+    "highlightColor": { "value": -65536, "falpha": 0.0 },
+    "highlightDifference": false,
+    "filterBank": false,
+    "unorderedHighlight": false,
+    "spellBook": 0,
+    "Id": 14
+}
