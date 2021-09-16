@@ -1,6 +1,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -2065,8 +2076,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _zulrah_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../zulrah.json */ "./resources/zulrah.json");
-/* harmony import */ var _entities_Inventory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../entities/Inventory */ "./resources/js/entities/Inventory.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _zulrah_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../zulrah.json */ "./resources/zulrah.json");
+/* harmony import */ var _vorkath_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../vorkath.json */ "./resources/vorkath.json");
+/* harmony import */ var _entities_Inventory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../entities/Inventory */ "./resources/js/entities/Inventory.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2182,16 +2202,228 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      invent: new _entities_Inventory__WEBPACK_IMPORTED_MODULE_1__["default"](_zulrah_json__WEBPACK_IMPORTED_MODULE_0__)
+      invent: new _entities_Inventory__WEBPACK_IMPORTED_MODULE_3__["default"](_zulrah_json__WEBPACK_IMPORTED_MODULE_1__)
     };
   },
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  methods: {
+    hasRunePouch: function hasRunePouch(inventory) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                inventory.forEach(function (item) {
+                  if (item.id == 12791) {
+                    return true;
+                  }
+                });
+                return _context.abrupt("return", false);
+
+              case 2:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    getWikiLink: function getWikiLink(item) {
+      var BASE_URL = "https://oldschool.runescape.wiki/w/";
+      var itemUrlName = item.name.split(" ").join("_");
+      return BASE_URL + itemUrlName;
+    },
+    itemClick: function itemClick(item) {
+      window.open(this.getWikiLink(item), "_blank").focus();
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["item"],
+  data: function data() {
+    console.log();
+    return {};
+  },
+  methods: {
+    getItemImgSrc: function getItemImgSrc(item) {
+      return "https://www.osrsbox.com/osrsbox-db/items-icons/".concat(item.id, ".png");
+    }
   }
 });
 
@@ -2222,6 +2454,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('inventory-builder', __webpack_require__(/*! ./components/InventoryBuilder.vue */ "./resources/js/components/InventoryBuilder.vue")["default"]);
+Vue.component('inventory-item', __webpack_require__(/*! ./components/InventoryItem.vue */ "./resources/js/components/InventoryItem.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -2308,6 +2541,7 @@ var Inventory = /*#__PURE__*/function () {
     this.notes = obj.notes;
     this.spellBook = obj.spellBook;
     this.unorderedHighlight = obj.unorderedHighlight;
+    this.rune_pouch = obj.rune_pouch;
   }
 
   _createClass(Inventory, [{
@@ -2319,6 +2553,26 @@ var Inventory = /*#__PURE__*/function () {
     key: "getEquipment",
     value: function getEquipment() {
       return this.equipment;
+    }
+  }, {
+    key: "getRunePouch",
+    value: function getRunePouch() {
+      return this.rune_pouch;
+    }
+  }, {
+    key: "getNotes",
+    value: function getNotes() {
+      return this.notes;
+    }
+  }, {
+    key: "getSpellBook",
+    value: function getSpellBook() {
+      return this.spellBook;
+    }
+  }, {
+    key: "getAdditionalFilteredItems",
+    value: function getAdditionalFilteredItems() {
+      return this.additionalFilteredItems;
     }
   }]);
 
@@ -6770,10 +7024,10 @@ var Inventory = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true&":
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&lang=scss&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&lang=scss& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6787,7 +7041,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".grid-row[data-v-f65eccec] {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n}\n.grid-item[data-v-f65eccec] {\n  height: 45px;\n  width: 45px;\n  margin: 1px;\n  background-color: #444;\n}\n.notes[data-v-f65eccec] {\n  width: 100%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".grid-row {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n}\n.grid-item {\n  height: 36px;\n  width: 45px;\n  margin: 1px;\n  background-color: #444;\n}\n.grid-item > img {\n  margin: auto;\n  display: flex;\n  margin-top: 2px;\n}\n.notes {\n  width: 100%;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=style&index=0&lang=scss&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=style&index=0&lang=scss& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".item-details {\n  position: relative;\n  bottom: 38px;\n}\n.item-detail {\n  font-size: 13px;\n  display: inline-block;\n  padding: 3px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37812,10 +38090,774 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  define(IteratorPrototype, iteratorSymbol, function () {
+    return this;
+  });
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = GeneratorFunctionPrototype;
+  define(Gp, "constructor", GeneratorFunctionPrototype);
+  define(GeneratorFunctionPrototype, "constructor", GeneratorFunction);
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      define(prototype, method, function(arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    return this;
+  });
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  define(Gp, toStringTagSymbol, "Generator");
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  define(Gp, iteratorSymbol, function() {
+    return this;
+  });
+
+  define(Gp, "toString", function() {
+    return "[object Generator]";
+  });
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : 0
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, in modern engines
+  // we can explicitly access globalThis. In older engines we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  if (typeof globalThis === "object") {
+    globalThis.regeneratorRuntime = runtime;
+  } else {
+    Function("r", "regeneratorRuntime = r")(runtime);
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&lang=scss&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&lang=scss& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37825,7 +38867,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_style_index_0_id_f65eccec_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryBuilder.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&lang=scss&");
 
             
 
@@ -37834,11 +38876,41 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_style_index_0_id_f65eccec_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_style_index_0_id_f65eccec_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=style&index=0&lang=scss&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=style&index=0&lang=scss& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryItem_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryItem.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=style&index=0&lang=scss&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryItem_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryItem_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -38132,9 +39204,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _InventoryBuilder_vue_vue_type_template_id_f65eccec_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InventoryBuilder.vue?vue&type=template&id=f65eccec&scoped=true& */ "./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&scoped=true&");
+/* harmony import */ var _InventoryBuilder_vue_vue_type_template_id_f65eccec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InventoryBuilder.vue?vue&type=template&id=f65eccec& */ "./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&");
 /* harmony import */ var _InventoryBuilder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InventoryBuilder.vue?vue&type=script&lang=js& */ "./resources/js/components/InventoryBuilder.vue?vue&type=script&lang=js&");
-/* harmony import */ var _InventoryBuilder_vue_vue_type_style_index_0_id_f65eccec_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true& */ "./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true&");
+/* harmony import */ var _InventoryBuilder_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./InventoryBuilder.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&lang=scss&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -38146,11 +39218,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _InventoryBuilder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _InventoryBuilder_vue_vue_type_template_id_f65eccec_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _InventoryBuilder_vue_vue_type_template_id_f65eccec_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _InventoryBuilder_vue_vue_type_template_id_f65eccec___WEBPACK_IMPORTED_MODULE_0__.render,
+  _InventoryBuilder_vue_vue_type_template_id_f65eccec___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "f65eccec",
+  null,
   null
   
 )
@@ -38158,6 +39230,47 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/InventoryBuilder.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/InventoryItem.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/InventoryItem.vue ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _InventoryItem_vue_vue_type_template_id_29b336b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InventoryItem.vue?vue&type=template&id=29b336b4& */ "./resources/js/components/InventoryItem.vue?vue&type=template&id=29b336b4&");
+/* harmony import */ var _InventoryItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InventoryItem.vue?vue&type=script&lang=js& */ "./resources/js/components/InventoryItem.vue?vue&type=script&lang=js&");
+/* harmony import */ var _InventoryItem_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./InventoryItem.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/components/InventoryItem.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _InventoryItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _InventoryItem_vue_vue_type_template_id_29b336b4___WEBPACK_IMPORTED_MODULE_0__.render,
+  _InventoryItem_vue_vue_type_template_id_29b336b4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/InventoryItem.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -38178,40 +39291,86 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true&":
-/*!****************************************************************************************************************!*\
-  !*** ./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true& ***!
-  \****************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_style_index_0_id_f65eccec_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&id=f65eccec&lang=scss&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&scoped=true&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&scoped=true& ***!
-  \*************************************************************************************************/
+/***/ "./resources/js/components/InventoryItem.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/InventoryItem.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_template_id_f65eccec_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_template_id_f65eccec_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_template_id_f65eccec_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryBuilder.vue?vue&type=template&id=f65eccec&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&scoped=true&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryItem.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&lang=scss&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&lang=scss& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryBuilder.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=style&index=0&lang=scss&");
 
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&scoped=true&":
-/*!****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&scoped=true& ***!
-  \****************************************************************************************************************************************************************************************************************************************/
+/***/ "./resources/js/components/InventoryItem.vue?vue&type=style&index=0&lang=scss&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/InventoryItem.vue?vue&type=style&index=0&lang=scss& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryItem_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryItem.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=style&index=0&lang=scss&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_template_id_f65eccec___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_template_id_f65eccec___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryBuilder_vue_vue_type_template_id_f65eccec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryBuilder.vue?vue&type=template&id=f65eccec& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/InventoryItem.vue?vue&type=template&id=29b336b4&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/InventoryItem.vue?vue&type=template&id=29b336b4& ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryItem_vue_vue_type_template_id_29b336b4___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryItem_vue_vue_type_template_id_29b336b4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InventoryItem_vue_vue_type_template_id_29b336b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InventoryItem.vue?vue&type=template&id=29b336b4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=template&id=29b336b4&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryBuilder.vue?vue&type=template&id=f65eccec& ***!
+  \****************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38224,173 +39383,605 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-100" }, [
-      _c("div", { staticClass: "mb-3" }, [
-        _c("h5", { staticClass: "text-center" }, [_vm._v("Inventory")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-item" })
-        ])
-      ]),
+  return _c("div", { staticClass: "w-100" }, [
+    _c("div", { staticClass: "mb-3" }, [
+      _c("h5", { staticClass: "text-center" }, [_vm._v("Inventory")]),
       _vm._v(" "),
-      _c("div", { staticClass: "mb-3" }, [
-        _c("h5", { staticClass: "text-center" }, [_vm._v("Rune Pouch")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" }),
+      _c(
+        "div",
+        { staticClass: "grid-row" },
+        [
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[0] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[0])
+              }
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[1] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[1])
+              }
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "grid-item" })
-        ])
-      ]),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[2] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[2])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[3] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[3])
+              }
+            }
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "mb-3" }, [
-        _c("div", { staticClass: "text-center mb-2" }, [
-          _c("h5", [_vm._v("Equipment")]),
+      _c(
+        "div",
+        { staticClass: "grid-row" },
+        [
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[4] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[4])
+              }
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "grid-row" }, [
-            _c("div", { staticClass: "grid-item" })
-          ]),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[5] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[5])
+              }
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "grid-row" }, [
-            _c("div", { staticClass: "grid-item" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "grid-item" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "grid-item" })
-          ]),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[6] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[6])
+              }
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "grid-row" }, [
-            _c("div", { staticClass: "grid-item" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "grid-item" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "grid-item" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-row" }, [
-            _c("div", { staticClass: "grid-item" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "grid-row" }, [
-            _c("div", { staticClass: "grid-item" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "grid-item" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "grid-item" })
-          ])
-        ])
-      ]),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[7] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[7])
+              }
+            }
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "mb-3" }, [
-        _c("h5", { staticClass: "text-center" }, [_vm._v("Spell Book")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" })
-        ])
-      ]),
+      _c(
+        "div",
+        { staticClass: "grid-row" },
+        [
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[8] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[8])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[9] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[9])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[10] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[10])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[11] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[11])
+              }
+            }
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "mb-3" }, [
-        _c("h5", { staticClass: "text-center" }, [
-          _vm._v("Additional Filtered Items")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid-row" }, [
-          _c("div", { staticClass: "grid-item" }),
+      _c(
+        "div",
+        { staticClass: "grid-row" },
+        [
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[12] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[12])
+              }
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[13] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[13])
+              }
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "grid-item" }),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[14] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[14])
+              }
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "grid-item" })
-        ])
-      ]),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[15] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[15])
+              }
+            }
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "mb-3" }, [
-        _c("h5", { staticClass: "text-center" }, [_vm._v("Notes")]),
+      _c(
+        "div",
+        { staticClass: "grid-row" },
+        [
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[16] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[16])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[17] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[17])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[18] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[18])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[19] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[19])
+              }
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "grid-row" },
+        [
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[20] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[20])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[21] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[21])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[22] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[22])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[23] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[23])
+              }
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "grid-row" },
+        [
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[24] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[24])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[25] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[25])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[26] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[26])
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("inventory-item", {
+            attrs: { item: _vm.invent.getInventory()[27] },
+            nativeOn: {
+              click: function($event) {
+                _vm.itemClick(_vm.invent.getInventory()[27])
+              }
+            }
+          })
+        ],
+        1
+      )
+    ]),
+    _vm._v(" "),
+    _vm.invent.getRunePouch()
+      ? _c("div", { staticClass: "mb-3" }, [
+          _c("h5", { staticClass: "text-center" }, [_vm._v("Rune Pouch")]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "grid-row" },
+            [
+              _c("inventory-item", {
+                attrs: { item: _vm.invent.getRunePouch()[0] },
+                nativeOn: {
+                  click: function($event) {
+                    _vm.itemClick(_vm.invent.getRunePouch()[0])
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("inventory-item", {
+                attrs: { item: _vm.invent.getRunePouch()[1] },
+                nativeOn: {
+                  click: function($event) {
+                    _vm.itemClick(_vm.invent.getRunePouch()[1])
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("inventory-item", {
+                attrs: { item: _vm.invent.getRunePouch()[2] },
+                nativeOn: {
+                  click: function($event) {
+                    _vm.itemClick(_vm.invent.getRunePouch()[2])
+                  }
+                }
+              })
+            ],
+            1
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c("div", { staticClass: "mb-3" }, [
+      _c("div", { staticClass: "text-center mb-2" }, [
+        _c("h5", [_vm._v("Equipment")]),
         _vm._v(" "),
-        _c("textarea", {
-          staticClass: "notes",
-          attrs: { name: "notes", rows: "4", cols: "50" }
-        })
+        _c(
+          "div",
+          { staticClass: "grid-row" },
+          [
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[0] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[0])
+                }
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "grid-row" },
+          [
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[1] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[1])
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[2] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[2])
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[13] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[13])
+                }
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "grid-row" },
+          [
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[3] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[3])
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[4] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[4])
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[5] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[5])
+                }
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "grid-row" },
+          [
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[7] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[7])
+                }
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "grid-row" },
+          [
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[9] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[9])
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[10] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[10])
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("inventory-item", {
+              attrs: { item: _vm.invent.getEquipment()[12] },
+              nativeOn: {
+                click: function($event) {
+                  _vm.itemClick(_vm.invent.getEquipment()[12])
+                }
+              }
+            })
+          ],
+          1
+        )
       ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "mb-3" }, [
+      _c("h5", { staticClass: "text-center" }, [_vm._v("Spell Book")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "grid-row" }, [
+        _c("div", { staticClass: "grid-item pt-1" }, [
+          _c("img", {
+            attrs: {
+              src: "/img/spellbook-icons/" + _vm.invent.getSpellBook() + ".png"
+            }
+          })
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "mb-3" }, [
+      _c("h5", { staticClass: "text-center" }, [
+        _vm._v("Additional Filtered Items")
+      ]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { staticClass: "list-group list-unstyled text-center" },
+        _vm._l(this.invent.getAdditionalFilteredItems(), function(item, index) {
+          return _c("li", { key: index, staticClass: "unstyled py-0" }, [
+            _c(
+              "a",
+              { attrs: { href: _vm.getWikiLink(item), target: "_blank" } },
+              [_vm._v(_vm._s(item.name))]
+            )
+          ])
+        }),
+        0
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "mb-3" }, [
+      _c("h5", { staticClass: "text-center" }, [_vm._v("Notes")]),
+      _vm._v(" "),
+      _c("textarea", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.invent.getNotes(),
+            expression: "invent.getNotes()"
+          }
+        ],
+        staticClass: "notes",
+        attrs: { name: "notes", rows: "7", cols: "50" },
+        domProps: { value: _vm.invent.getNotes() },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.invent, "getNotes()", $event.target.value)
+          }
+        }
+      })
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=template&id=29b336b4&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/InventoryItem.vue?vue&type=template&id=29b336b4& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "grid-item",
+      attrs: {
+        "data-toggle": "tooltip",
+        "data-placement": "top",
+        title: this.item.name
+      }
+    },
+    [
+      _c("img", { attrs: { src: _vm.getItemImgSrc(_vm.item), alt: "" } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "item-details" }, [
+        this.item.fuzzy
+          ? _c("div", { staticClass: "item-detail float-right" }, [_vm._v("*")])
+          : _vm._e(),
+        _vm._v(" "),
+        this.item.quantity && this.item.quantity > 1
+          ? _c("div", { staticClass: "item-detail float-left" }, [
+              _vm._v("\n      " + _vm._s(this.item.quantity) + "\n    ")
+            ])
+          : _vm._e()
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -50565,6 +52156,17 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","/Users/fraserprovan/Docu
 
 /***/ }),
 
+/***/ "./resources/vorkath.json":
+/*!********************************!*\
+  !*** ./resources/vorkath.json ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"inventory":[{"id":21946,"name":"Diamond dragon bolts (e)","quantity":250,"fuzzy":true,"stackCompare":"None"},{"id":2434,"name":"Prayer potion(4)","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":2434,"name":"Prayer potion(4)","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":2434,"name":"Prayer potion(4)","quantity":10,"fuzzy":false,"stackCompare":"None"},{"id":12913,"name":"Anti-venom+(4)","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":385,"name":"Shark","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":2444,"name":"Ranging potion(4)","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":11951,"name":"Extended antifire(4)","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":12791,"name":"Rune pouch","quantity":1,"fuzzy":false,"stackCompare":"None"}],"equipment":[{"id":11664,"name":"Void ranger helm","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":22109,"name":"Ava\'s assembler","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":12018,"name":"Salve amulet(ei)","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":21012,"name":"Dragon hunter crossbow","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":13072,"name":"Elite void top","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":22002,"name":"Dragonfire ward","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":-1,"name":"null","quantity":0,"fuzzy":false,"stackCompare":"None"},{"id":13073,"name":"Elite void robe","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":-1,"name":"null","quantity":0,"fuzzy":false,"stackCompare":"None"},{"id":8842,"name":"Void knight gloves","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":13237,"name":"Pegasian boots","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":-1,"name":"null","quantity":0,"fuzzy":false,"stackCompare":"None"},{"id":11771,"name":"Archers ring (i)","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":21944,"name":"Ruby dragon bolts (e)","quantity":500,"fuzzy":true,"stackCompare":"None"}],"rune_pouch":[{"id":563,"name":"Law","quantity":200,"fuzzy":false,"stackCompare":"None"},{"id":562,"name":"Chaos","quantity":500,"fuzzy":false,"stackCompare":"None"},{"id":4696,"name":"Dust","quantity":1000,"fuzzy":false,"stackCompare":"None"}],"additionalFilteredItems":{"391":{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},"392":{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},"393":{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},"394":{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},"395":{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"}},"name":"Vorkath","notes":"Ruby -> Diamond @ 265hp (25%)\\n\\nQuick Prayers:\\n\\tProtect Range\\n\\tRigour\\n\\n","highlightColor":{"value":-65536,"falpha":0},"highlightDifference":false,"filterBank":true,"unorderedHighlight":false,"spellBook":0,"Id":9223372036854776000}');
+
+/***/ }),
+
 /***/ "./resources/zulrah.json":
 /*!*******************************!*\
   !*** ./resources/zulrah.json ***!
@@ -50572,7 +52174,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","/Users/fraserprovan/Docu
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"inventory":[{"id":20724,"name":"Imbued heart","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":2434,"name":"Prayer potion(4)","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":2434,"name":"Prayer potion(4)","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":12913,"name":"Anti-venom+(4)","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":8013,"name":"Teleport to house","quantity":8,"fuzzy":false,"stackCompare":"None"},{"id":12938,"name":"Zul-andra teleport","quantity":2,"fuzzy":false,"stackCompare":"None"}],"equipment":[{"id":4856,"name":"Ahrim\'s hood 100","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":21791,"name":"Imbued saradomin cape","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":12002,"name":"Occult necklace","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":12899,"name":"Trident of the swamp","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":4870,"name":"Ahrim\'s robetop 50","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":12612,"name":"Book of darkness","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":-1,"name":"null","quantity":0,"fuzzy":false,"stackCompare":"None"},{"id":4876,"name":"Ahrim\'s robeskirt 50","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":-1,"name":"null","quantity":0,"fuzzy":false,"stackCompare":"None"},{"id":19544,"name":"Tormented bracelet","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":13235,"name":"Eternal boots","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":-1,"name":"null","quantity":0,"fuzzy":false,"stackCompare":"None"},{"id":20657,"name":"Ring of suffering (ri)","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":22945,"name":"Rada\'s blessing 3","quantity":1,"fuzzy":true,"stackCompare":"None"}],"additionalFilteredItems":{"554":{"id":554,"name":"Fire rune","quantity":1,"fuzzy":false,"stackCompare":"None"},"560":{"id":560,"name":"Death rune","quantity":1,"fuzzy":false,"stackCompare":"None"},"562":{"id":562,"name":"Chaos rune","quantity":1,"fuzzy":false,"stackCompare":"None"},"2550":{"id":2550,"name":"Ring of recoil","quantity":1,"fuzzy":false,"stackCompare":"None"},"12934":{"id":12934,"name":"Zulrah\'s scales","quantity":1,"fuzzy":false,"stackCompare":"None"}},"name":"Zulrah","notes":"Rotation guide:\\nnightfirecat.github.io/zulrahguide\\n\\nGreen -  Protect Range\\nLight Blue - Protect Mage\\nOrange - Protect none\\n\\nfully charghed tridant is \\n2500   x death runes\\n2500   x chaos runes\\n12500 x fire runes\\n2500   x scales","highlightColor":{"value":-65536,"falpha":0},"highlightDifference":false,"filterBank":true,"unorderedHighlight":false,"spellBook":1,"Id":9223372036854776000}');
+module.exports = JSON.parse('{"inventory":[{"id":20724,"name":"Imbued heart","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":2434,"name":"Prayer potion(4)","quantity":300,"fuzzy":true,"stackCompare":"None"},{"id":2434,"name":"Prayer potion(4)","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":12913,"name":"Anti-venom+(4)","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":391,"name":"Manta ray","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":3144,"name":"Cooked karambwan","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":8013,"name":"Teleport to house","quantity":8,"fuzzy":false,"stackCompare":"None"},{"id":12938,"name":"Zul-andra teleport","quantity":2,"fuzzy":false,"stackCompare":"None"}],"equipment":[{"id":4856,"name":"Ahrim\'s hood 100","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":21791,"name":"Imbued saradomin cape","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":12002,"name":"Occult necklace","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":12899,"name":"Trident of the swamp","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":4870,"name":"Ahrim\'s robetop 50","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":12612,"name":"Book of darkness","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":-1,"name":"null","quantity":0,"fuzzy":false,"stackCompare":"None"},{"id":4876,"name":"Ahrim\'s robeskirt 50","quantity":1,"fuzzy":true,"stackCompare":"None"},{"id":-1,"name":"null","quantity":0,"fuzzy":false,"stackCompare":"None"},{"id":19544,"name":"Tormented bracelet","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":13235,"name":"Eternal boots","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":-1,"name":"null","quantity":0,"fuzzy":false,"stackCompare":"None"},{"id":20657,"name":"Ring of suffering (ri)","quantity":1,"fuzzy":false,"stackCompare":"None"},{"id":22945,"name":"Rada\'s blessing 3","quantity":1,"fuzzy":true,"stackCompare":"None"}],"additionalFilteredItems":{"554":{"id":554,"name":"Fire rune","quantity":1,"fuzzy":false,"stackCompare":"None"},"560":{"id":560,"name":"Death rune","quantity":1,"fuzzy":false,"stackCompare":"None"},"562":{"id":562,"name":"Chaos rune","quantity":1,"fuzzy":false,"stackCompare":"None"},"2550":{"id":2550,"name":"Ring of recoil","quantity":1,"fuzzy":false,"stackCompare":"None"},"12934":{"id":12934,"name":"Zulrah\'s scales","quantity":1,"fuzzy":false,"stackCompare":"None"}},"name":"Zulrah","notes":"Rotation guide:\\nnightfirecat.github.io/zulrahguide\\n\\nGreen -  Protect Range\\nLight Blue - Protect Mage\\nOrange - Protect none\\n\\nfully charghed tridant is \\n2500   x death runes\\n2500   x chaos runes\\n12500 x fire runes\\n2500   x scales","highlightColor":{"value":-65536,"falpha":0},"highlightDifference":false,"filterBank":true,"unorderedHighlight":false,"spellBook":1,"Id":9223372036854776000}');
 
 /***/ })
 

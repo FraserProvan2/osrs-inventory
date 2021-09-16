@@ -20,6 +20,7 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('inventory-builder', require('./components/InventoryBuilder.vue').default);
+Vue.component('inventory-item', require('./components/InventoryItem.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

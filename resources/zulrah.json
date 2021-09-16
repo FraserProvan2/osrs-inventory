@@ -10,7 +10,7 @@
        {
           "id":2434,
           "name":"Prayer potion(4)",
-          "quantity":1,
+          "quantity":300,
           "fuzzy":true,
           "stackCompare":"None"
        },
