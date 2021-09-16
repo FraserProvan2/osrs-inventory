@@ -250,35 +250,39 @@
     </div>
 
     <!-- Modal -->
-    <b-modal ref="edit-modal" hide-footer title="Edit Item">
+    <b-modal
+      ref="edit-modal"
+      hide-footer
+      :title="`Edit Item - ${this.editingItem.name}`"
+    >
       <div class="d-block">
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label for="exampleInputEmail1">Quantity</label>
+              <label for="inlineFormInput">Quantity</label>
               <input
-                type="email"
+                type="number"
                 class="form-control"
-                v-model="this.editingItem.quantity"
+                v-model="pendingQuantity"
               />
             </div>
-          </div>
-          <div class="col-md-6">
             <div class="form-check">
-              <!-- https://getbootstrap.com/docs/4.0/components/forms/ -->
               <input
                 class="form-check-input"
                 type="checkbox"
-                value=""
-                id="defaultCheck1"
                 :checked="this.editingItem.fuzzy"
+                v-model="pendingFuzzy"
               />
               <label class="form-check-label" for="defaultCheck1">
                 Fuzzy
               </label>
             </div>
           </div>
+          <div class="col-md-6"></div>
         </div>
+
+        <hr />
+        <button type="submit" class="btn btn-primary" @click="updateItem()">Update Item</button>
       </div>
     </b-modal>
   </div>
@@ -294,7 +298,10 @@ export default {
     return {
       invent: new Inventory(vorkathExample),
       isEdit: true,
-      editingItem: false
+      editingItem: false,
+      editingItemKey: false,
+      pendingFuzzy: false,
+      pendingQuantity: false,
     };
   },
   methods: {
@@ -315,13 +322,19 @@ export default {
     itemClick(item, key) {
       if (this.isEdit) {
         this.editingItem = item;
-        console.log(item, key);
+        this.pendingFuzzy = this.editingItem.fuzzy;
+        this.pendingQuantity = this.editingItem.quantity;
+        this.editingItemKey = key;
         this.$refs["edit-modal"].show();
-
       } else {
         window.open(this.getWikiLink(item), "_blank").focus();
       }
     },
+    updateItem() {
+      console.log('updating: ' + this.editingItemKey);
+      console.log('fuzzy:' + this.pendingFuzzy);
+      console.log('quantity:' + this.pendingQuantity);
+    }
   },
 };
 </script>
