@@ -255,33 +255,38 @@
       hide-footer
       :title="`Edit Item - ${this.editingItem.name}`"
     >
+      <h6>Update existing item</h6>
       <div class="d-block">
         <div class="row">
           <div class="col-md-6">
-            <div class="form-group">
-              <label for="inlineFormInput">Quantity</label>
+              <div class="input-group">
+                <span class="input-group-text">Qty</span>
+                <input 
+                  type="number"
+                  class="form-control"
+                  v-model="pendingQuantity"
+                >
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-check mt-2">
               <input
-                type="number"
-                class="form-control"
-                v-model="pendingQuantity"
-              />
-            </div>
-            <div class="form-check">
-              <input
+                id="fuzzy-check"
                 class="form-check-input"
                 type="checkbox"
                 :checked="this.editingItem.fuzzy"
                 v-model="pendingFuzzy"
               />
-              <label class="form-check-label" for="defaultCheck1">
+              <label class="form-check-label" for="fuzzy-check">
                 Fuzzy
               </label>
             </div>
           </div>
-          <div class="col-md-6"></div>
         </div>
+        <br>
 
-        <hr />
+        <h6>Change item</h6>
+        <input class="form-control mb-1" type="text" placeholder="Search Items" v-model="itemSearch" @keyup="searchItems()">
         <button type="submit" class="btn btn-primary" @click="updateItem()">Update Item</button>
       </div>
     </b-modal>
@@ -298,6 +303,7 @@ export default {
     return {
       invent: new Inventory(vorkathExample),
       isEdit: true,
+      itemSearch: "",
       editingItem: false,
       editingItemKey: false,
       pendingFuzzy: false,
@@ -334,6 +340,9 @@ export default {
       console.log('updating: ' + this.editingItemKey);
       console.log('fuzzy:' + this.pendingFuzzy);
       console.log('quantity:' + this.pendingQuantity);
+    },
+    searchItems() {
+      console.log(this.itemSearch);
     }
   },
 };
@@ -357,6 +366,10 @@ export default {
     display: flex;
     margin-top: 2px;
   }
+}
+
+.grid-item:hover {
+  background-color: #616060;
 }
 
 .notes {
