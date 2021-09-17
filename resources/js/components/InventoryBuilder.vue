@@ -132,20 +132,20 @@
     </div>
 
     <!-- Rune Pouch -->
-    <div class="mb-3" v-if="invent.getRunePouch()">
+    <div class="mb-3" v-if="this.hasRunePouch">
       <h5 class="text-center">Rune Pouch</h5>
       <div class="grid-row">
         <inventory-item
           :item="invent.getRunePouch()[0]"
-          @click.native="itemClick(invent.getRunePouch()[0], 'pouch.0')"
+          @click.native="itemClick(invent.getRunePouch()[0], 'rune_pouch.0')"
         />
         <inventory-item
           :item="invent.getRunePouch()[1]"
-          @click.native="itemClick(invent.getRunePouch()[1], 'pouch.1')"
+          @click.native="itemClick(invent.getRunePouch()[1], 'rune_pouch.1')"
         />
         <inventory-item
           :item="invent.getRunePouch()[2]"
-          @click.native="itemClick(invent.getRunePouch()[2], 'pouch.2')"
+          @click.native="itemClick(invent.getRunePouch()[2], 'rune_pouch.2')"
         />
       </div>
     </div>
@@ -243,7 +243,7 @@
         name="notes"
         rows="7"
         cols="50"
-        v-model="invent.getNotes()"
+        v-model="notes"
         :readonly="!this.isEdit"
       >
       </textarea>
@@ -259,14 +259,15 @@
       <div class="d-block">
         <div class="row">
           <div class="col-md-6">
-              <div class="input-group">
-                <span class="input-group-text">Qty</span>
-                <input 
-                  type="number"
-                  class="form-control"
-                  v-model="pendingQuantity"
-                >
-              </div>
+            <div class="input-group">
+              <span class="input-group-text">Qty</span>
+              <input
+                type="number"
+                class="form-control"
+                v-model="pendingQuantity"
+                @change="updateFuzzyOrQty()"
+              />
+            </div>
           </div>
           <div class="col-md-6">
             <div class="form-check mt-2">
@@ -276,25 +277,38 @@
                 type="checkbox"
                 :checked="this.editingItem.fuzzy"
                 v-model="pendingFuzzy"
+                @change="updateFuzzyOrQty()"
               />
-              <label class="form-check-label" for="fuzzy-check">
-                Fuzzy
-              </label>
+              <label class="form-check-label" for="fuzzy-check"> Fuzzy </label>
             </div>
           </div>
         </div>
-        <br>
+        <br />
 
         <h6>Change item</h6>
-        <input class="form-control mb-1" type="text" placeholder="Search Items" v-model="itemSearch" @keyup="searchItems()">
-        <button type="submit" class="btn btn-primary" @click="updateItem()">Update Item</button>
+        <input
+          class="form-control mb-1"
+          type="text"
+          placeholder="Search Items"
+          v-model="itemSearch"
+          @keyup="searchItems()"
+        />
+        <div class="grid-row my-2" v-if="this.itemSearchResult">
+          <inventory-item
+            v-for="(item, index) in this.itemSearchResult"
+            :key="index"
+            :item="item"
+            @click.native="updateItem(item)"
+          />
+        </div>
       </div>
     </b-modal>
   </div>
 </template>
 
 <script>
-import zulrahExample from "../../new.json";
+import ItemIndex from "../../items.json";
+import zulrahExample from "../../zulrah.json";
 import vorkathExample from "../../vorkath.json";
 import Inventory from "../entities/Inventory";
 
@@ -304,27 +318,16 @@ export default {
       invent: new Inventory(vorkathExample),
       isEdit: true,
       itemSearch: "",
+      itemSearchResult: false,
+      hasRunePouch: false,
       editingItem: false,
       editingItemKey: false,
+      notes: "",
       pendingFuzzy: false,
       pendingQuantity: false,
     };
   },
   methods: {
-    async hasRunePouch(inventory) {
-      inventory.forEach((item) => {
-        if (item.id == 12791) {
-          return true;
-        }
-      });
-
-      return false;
-    },
-    getWikiLink(item) {
-      const BASE_URL = "https://oldschool.runescape.wiki/w/";
-      let itemUrlName = item.name.split(" ").join("_");
-      return BASE_URL + itemUrlName;
-    },
     itemClick(item, key) {
       if (this.isEdit) {
         this.editingItem = item;
@@ -336,43 +339,68 @@ export default {
         window.open(this.getWikiLink(item), "_blank").focus();
       }
     },
-    updateItem() {
-      console.log('updating: ' + this.editingItemKey);
-      console.log('fuzzy:' + this.pendingFuzzy);
-      console.log('quantity:' + this.pendingQuantity);
+    updateFuzzyOrQty() {
+      this.updateItem(
+        this.editingItem,
+        this.pendingQuantity,
+        this.pendingFuzzy
+      );
+    },
+    updateItem(item, quantity = 1, fuzzy = false) {
+      // Update object
+      let itemData = {
+        fuzzy,
+        id: item.id,
+        name: item.name,
+        quantity,
+        stackCompare: "None",
+      };
+      this.invent = this.invent.setItemByKey(itemData, this.editingItemKey);
+
+      // update UI
+      this.$refs["edit-modal"].hide();
+      this.editingItem = itemData;
+      this.pendingFuzzy = itemData.fuzzy;
+      this.pendingQuantity = itemData.quantity;
+      this.itemSearchResult = false;
+      this.itemSearch = "";
+
+      // reset
+      this.checkForRunePouch();
+      this.$forceUpdate();
+    },
+    updateNotes(yay) {
+      this.invent.setNotes(this.invent.getNotes());
     },
     searchItems() {
-      console.log(this.itemSearch);
-    }
+      // Search term
+      let result = Object.values(ItemIndex).filter((item) =>
+        item.name.toLowerCase().includes(this.itemSearch.toLowerCase())
+      );
+
+      // Where not placeholder
+      result = Object.values(result).filter(
+        (item) => item.type !== "placeholder"
+      );
+
+      this.itemSearchResult = result.slice(0, 27);
+    },
+    checkForRunePouch() {
+      this.invent.inventory.forEach((item) => {
+        this.hasRunePouch = false;
+        if (item.id == 12791 || item.id == 23650 || item.id == 24416) {
+          this.hasRunePouch = true;
+        }
+      });
+    },
+    getWikiLink(item) {
+      const BASE_URL = "https://oldschool.runescape.wiki/w/";
+      let itemUrlName = item.name.split(" ").join("_");
+      return BASE_URL + itemUrlName;
+    },
+  },
+  mounted() {
+    this.checkForRunePouch();
   },
 };
 </script>
-
-<style lang="scss">
-.grid-row {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.grid-item {
-  height: 36px;
-  width: 45px;
-  margin: 1px;
-  background-color: #444;
-
-  & > img {
-    margin: auto;
-    display: flex;
-    margin-top: 2px;
-  }
-}
-
-.grid-item:hover {
-  background-color: #616060;
-}
-
-.notes {
-  width: 100%;
-}
-</style>

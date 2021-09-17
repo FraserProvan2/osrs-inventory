@@ -24,8 +24,8 @@
         {
             "id": 2434,
             "name": "Prayer potion(4)",
-            "quantity": 10,
-            "fuzzy": false,
+            "quantity": 1,
+            "fuzzy": true,
             "stackCompare": "None"
         },
         {
@@ -241,10 +241,10 @@
             "stackCompare": "None"
         },
         {
-            "id": -1,
-            "name": "null",
-            "quantity": 0,
-            "fuzzy": false,
+            "id": 22002,
+            "name": "Dragonfire ward",
+            "quantity": 1,
+            "fuzzy": true,
             "stackCompare": "None"
         },
         {
@@ -322,34 +322,6 @@
     ],
     "additionalFilteredItems": {
         "391": {
-            "id": 391,
-            "name": "Manta ray",
-            "quantity": 1,
-            "fuzzy": false,
-            "stackCompare": "None"
-        },
-        "392": {
-            "id": 391,
-            "name": "Manta ray",
-            "quantity": 1,
-            "fuzzy": false,
-            "stackCompare": "None"
-        },
-        "393": {
-            "id": 391,
-            "name": "Manta ray",
-            "quantity": 1,
-            "fuzzy": false,
-            "stackCompare": "None"
-        },
-        "394": {
-            "id": 391,
-            "name": "Manta ray",
-            "quantity": 1,
-            "fuzzy": false,
-            "stackCompare": "None"
-        },
-        "395": {
             "id": 391,
             "name": "Manta ray",
             "quantity": 1,

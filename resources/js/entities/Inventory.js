@@ -32,4 +32,12 @@ export default class Inventory {
     getAdditionalFilteredItems() {
         return this.additionalFilteredItems;
     }
+
+    setItemByKey(item, key) {
+        const section = key.split(".")[0];
+        const index = key.split(".")[1];
+        this[section][index] = item;
+
+        return this;
+    }
 }

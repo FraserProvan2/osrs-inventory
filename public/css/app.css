@@ -22421,3 +22421,55 @@ h3 {
 .alert-dark {
   background-color: #303030;
 }
+
+.grid-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  height: 36px;
+  width: 45px;
+  margin: 1px;
+  background-color: #444;
+  cursor: pointer;
+}
+.grid-item > img {
+  margin: auto;
+  display: flex;
+  margin-top: 2px;
+}
+
+.grid-item:hover {
+  background-color: #616060;
+}
+
+.notes {
+  width: 100%;
+}
+
+.item-details {
+  position: relative;
+  padding: 1px;
+  bottom: 40px;
+}
+
+.item-detail {
+  width: 100%;
+  display: inline-flex;
+  font-size: 13px;
+  text-overflow: ellipsis;
+}
+.item-detail > div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item-detail > #fuzzy {
+  position: relative;
+  bottom: 15px;
+  font-size: 30px;
+  opacity: 0.4;
+}
