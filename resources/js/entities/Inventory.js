@@ -32,6 +32,9 @@ export default class Inventory {
     getAdditionalFilteredItems() {
         return this.additionalFilteredItems;
     }
+    getInventJSON() {
+        return JSON.stringify(this);
+    }
 
     setItemByKey(item, key) {
         const section = key.split(".")[0];

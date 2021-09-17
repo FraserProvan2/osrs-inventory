@@ -250,6 +250,9 @@
       </textarea>
     </div>
 
+    <button class="btn btn-secondary" @click="exportInvent"><i class="fa fa-copy"></i></button>
+    <button class="btn btn-success"><i class="fa fa-save"></i></button>
+
     <!-- Modal -->
     <b-modal
       ref="edit-modal"
@@ -400,9 +403,12 @@ export default {
       let itemUrlName = item.name.split(" ").join("_");
       return BASE_URL + itemUrlName;
     },
+    exportInvent() {
+      console.log(JSON.stringify(this.invent));
+    }
   },
   mounted() {
-    this.invent = new Inventory(vorkathExample);
+    // this.invent = new Inventory(vorkathExample);
     this.notes = this.invent.notes;
     this.checkForRunePouch();
   },
