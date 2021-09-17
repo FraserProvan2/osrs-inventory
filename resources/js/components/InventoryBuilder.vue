@@ -245,6 +245,7 @@
         cols="50"
         v-model="notes"
         :readonly="!this.isEdit"
+        @keyup="updateNote()"
       >
       </textarea>
     </div>
@@ -311,18 +312,19 @@ import ItemIndex from "../../items.json";
 import zulrahExample from "../../zulrah.json";
 import vorkathExample from "../../vorkath.json";
 import Inventory from "../entities/Inventory";
+import jadExample from "../../jad.json";
 
 export default {
   data() {
     return {
-      invent: new Inventory(vorkathExample),
+      invent: new Inventory(),
       isEdit: true,
       itemSearch: "",
       itemSearchResult: false,
       hasRunePouch: false,
       editingItem: false,
       editingItemKey: false,
-      notes: "",
+      notes: false,
       pendingFuzzy: false,
       pendingQuantity: false,
     };
@@ -369,8 +371,8 @@ export default {
       this.checkForRunePouch();
       this.$forceUpdate();
     },
-    updateNotes(yay) {
-      this.invent.setNotes(this.invent.getNotes());
+    updateNote() {
+      this.invent.setNotes(this.notes);
     },
     searchItems() {
       // Search term
@@ -400,6 +402,8 @@ export default {
     },
   },
   mounted() {
+    this.invent = new Inventory(vorkathExample);
+    this.notes = this.invent.notes;
     this.checkForRunePouch();
   },
 };

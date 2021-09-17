@@ -40,4 +40,7 @@ export default class Inventory {
 
         return this;
     }
+    setNotes(newNotes) {
+        this.notes = newNotes;
+    }
 }
