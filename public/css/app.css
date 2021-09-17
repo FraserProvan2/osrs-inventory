@@ -22440,6 +22440,7 @@ h3 {
   margin: auto;
   display: flex;
   margin-top: 2px;
+  height: 32px;
 }
 
 .grid-item:hover {

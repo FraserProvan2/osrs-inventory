@@ -1,10 +1,10 @@
 {
     "inventory": [
         {
-            "id": 21946,
-            "name": "Diamond dragon bolts (e)",
-            "quantity": 250,
-            "fuzzy": true,
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
             "stackCompare": "None"
         },
         {
@@ -199,10 +199,10 @@
     ],
     "equipment": [
         {
-            "id": 11664,
-            "name": "Void ranger helm",
-            "quantity": 1,
-            "fuzzy": true,
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
             "stackCompare": "None"
         },
         {

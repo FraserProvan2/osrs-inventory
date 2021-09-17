@@ -23,7 +23,6 @@
 export default {
   props: ["item"],
   data() {
-    console.log();
     return {};
   },
   methods: {
