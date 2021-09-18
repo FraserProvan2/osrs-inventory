@@ -10,7 +10,10 @@ window.Vue = require('vue').default;
 
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import Notifications from 'vue-notification'
+
 Vue.use(BootstrapVue);
+Vue.use(Notifications)
 
 /**
  * The following block of code may be used to automatically register your

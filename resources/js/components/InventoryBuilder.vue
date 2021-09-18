@@ -250,7 +250,9 @@
       </textarea>
     </div>
 
-    <button class="btn btn-secondary" @click="exportInvent"><i class="fa fa-copy"></i></button>
+    <button class="btn btn-secondary" @click="exportInvent">
+      <i class="fa fa-copy"></i>
+    </button>
     <button class="btn btn-success"><i class="fa fa-save"></i></button>
 
     <!-- Modal -->
@@ -269,6 +271,7 @@
                 type="number"
                 class="form-control"
                 v-model="pendingQuantity"
+                :disabled="this.editingItem.id == -1"
                 @change="updateFuzzyOrQty()"
               />
             </div>
@@ -281,6 +284,7 @@
                 type="checkbox"
                 :checked="this.editingItem.fuzzy"
                 v-model="pendingFuzzy"
+                :disabled="this.editingItem.id == -1"
                 @change="updateFuzzyOrQty()"
               />
               <label class="form-check-label" for="fuzzy-check"> Fuzzy </label>
@@ -307,14 +311,18 @@
         </div>
       </div>
     </b-modal>
+    <notifications group="all" position="top right" />
   </div>
 </template>
 
 <script>
 import ItemIndex from "../../items.json";
+import Inventory from "../entities/Inventory";
+import Utils from "../Utils";
+
+// temp
 import zulrahExample from "../../zulrah.json";
 import vorkathExample from "../../vorkath.json";
-import Inventory from "../entities/Inventory";
 import jadExample from "../../jad.json";
 
 export default {
@@ -372,6 +380,7 @@ export default {
 
       // reset
       this.checkForRunePouch();
+      this.fireAlert("success", "Success", "Item updated.");
       this.$forceUpdate();
     },
     updateNote() {
@@ -404,8 +413,12 @@ export default {
       return BASE_URL + itemUrlName;
     },
     exportInvent() {
-      console.log(JSON.stringify(this.invent));
-    }
+      this.fireAlert("success", "Success", "Exported to clipboard.");
+      Utils.copyToClipboard(JSON.stringify(this.invent));
+    },
+    fireAlert(type, title, text) {
+      this.$notify({ group: "all", title, type, text, duration: 2500 });
+    },
   },
   mounted() {
     // this.invent = new Inventory(vorkathExample);
