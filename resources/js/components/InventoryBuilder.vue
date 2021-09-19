@@ -463,7 +463,7 @@ export default {
       return BASE_URL + itemUrlName;
     },
     exportInvent() {
-      this.fireAlert("success", "Success", "Exported to clipboard.");
+      this.fireAlert("success", "Success", "Copied to clipboard.");
       Utils.copyToClipboard(JSON.stringify(this.invent));
     },
     fireAlert(type, title, text) {
