@@ -37,6 +37,11 @@ export default class Inventory {
     }
 
     setItemByKey(item, key) {
+        if (key == 'additional') {
+            this.additionalFilteredItems[item.id] = item;
+            return this;
+        }
+
         const section = key.split(".")[0];
         const index = key.split(".")[1];
         this[section][index] = item;

@@ -22475,6 +22475,16 @@ h3 {
   opacity: 0.4;
 }
 
+.remove-additional {
+  padding: 0px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.remove-additional i {
+  font-size: 12px;
+  text-align: center;
+}
+
 .vue-notification {
   border-radius: 5.5px !important;
 }

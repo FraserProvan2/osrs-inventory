@@ -231,6 +231,12 @@
           :key="index"
         >
           <a :href="getWikiLink(item)" target="_blank">{{ item.name }}</a>
+          <button class="btn btn-sm btn-danger remove-additional" v-if="isEdit">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </button>
+        </li>
+        <li class="unstyled py-0 text-success" v-if="isEdit">
+          <button class="btn btn-sm btn-success my-1 px-3" @click="itemClick(null, 'additional')">Add Item</button>
         </li>
       </ul>
     </div>
@@ -259,11 +265,11 @@
     <b-modal
       ref="edit-modal"
       hide-footer
-      :title="`Edit Item - ${this.editingItem.name}`"
+      :title="(this.editingItemKey == 'additional') ? 'Add additional item' : `Edit Item - ${this.editingItem.name}`"
     >
-      <h6>Update existing item</h6>
+      <h6 v-if="this.editingItemKey != 'additional'">Update existing item</h6>
       <div class="d-block">
-        <div class="row">
+        <div class="row" v-if="this.editingItemKey != 'additional'">
           <div class="col-md-6">
             <div class="input-group">
               <span class="input-group-text">Qty</span>
@@ -293,7 +299,7 @@
         </div>
         <br />
 
-        <h6>Change item</h6>
+        <h6 v-if="this.editingItemKey != 'additional'">Change item</h6>
         <input
           class="form-control mb-1"
           type="text"
@@ -328,7 +334,7 @@ import jadExample from "../../jad.json";
 export default {
   data() {
     return {
-      invent: new Inventory(),
+      invent: new Inventory(zulrahExample),
       isEdit: true,
       itemSearch: "",
       itemSearchResult: false,
@@ -343,6 +349,15 @@ export default {
   methods: {
     itemClick(item, key) {
       if (this.isEdit) {
+        if (key == 'additional') {
+          this.editingItemKey = 'additional';
+          this.editingItem = {
+            name: 'Additional Items'
+          }
+          this.$refs["edit-modal"].show();
+          return;
+        }
+
         this.editingItem = item;
         this.pendingFuzzy = this.editingItem.fuzzy;
         this.pendingQuantity = this.editingItem.quantity;
