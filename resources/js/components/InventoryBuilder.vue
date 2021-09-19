@@ -231,12 +231,20 @@
           :key="index"
         >
           <a :href="getWikiLink(item)" target="_blank">{{ item.name }}</a>
-          <button class="btn btn-sm btn-danger remove-additional" v-if="isEdit">
-            <i class="fa fa-trash" aria-hidden="true"></i>
-          </button>
+          <a
+            class="text-danger small"
+            v-if="isEdit"
+            @click="removeAdditionalItem(index)"
+            >(remove)</a
+          >
         </li>
         <li class="unstyled py-0 text-success" v-if="isEdit">
-          <button class="btn btn-sm btn-success my-1 px-3" @click="itemClick(null, 'additional')">Add Item</button>
+          <button
+            class="btn btn-sm btn-success my-1 px-3"
+            @click="itemClick(null, 'additional')"
+          >
+            Add Item
+          </button>
         </li>
       </ul>
     </div>
@@ -265,7 +273,11 @@
     <b-modal
       ref="edit-modal"
       hide-footer
-      :title="(this.editingItemKey == 'additional') ? 'Add additional item' : `Edit Item - ${this.editingItem.name}`"
+      :title="
+        this.editingItemKey == 'additional'
+          ? 'Add additional item'
+          : `Edit Item - ${this.editingItem.name}`
+      "
     >
       <h6 v-if="this.editingItemKey != 'additional'">Update existing item</h6>
       <div class="d-block">
@@ -282,7 +294,7 @@
               />
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4 mb-2">
             <div class="form-check mt-2">
               <input
                 id="fuzzy-check"
@@ -295,6 +307,11 @@
               />
               <label class="form-check-label" for="fuzzy-check"> Fuzzy </label>
             </div>
+          </div>
+          <div class="col-md-2" v-if="this.editingItem.id != -1">
+            <button class="btn btn-danger w-100" @click="removeItem()">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
         <br />
@@ -349,11 +366,11 @@ export default {
   methods: {
     itemClick(item, key) {
       if (this.isEdit) {
-        if (key == 'additional') {
-          this.editingItemKey = 'additional';
+        if (key == "additional") {
+          this.editingItemKey = "additional";
           this.editingItem = {
-            name: 'Additional Items'
-          }
+            name: "Additional Items",
+          };
           this.$refs["edit-modal"].show();
           return;
         }
@@ -395,11 +412,29 @@ export default {
 
       // reset
       this.checkForRunePouch();
-      this.fireAlert("success", "Success", "Item updated.");
+      this.fireAlert(
+        "success",
+        "Success",
+        this.editingItemKey == "additional"
+          ? "Additional item added."
+          : "Item updated."
+      );
       this.$forceUpdate();
     },
     updateNote() {
       this.invent.setNotes(this.notes);
+    },
+    removeItem() {
+      const newItem = new Inventory()["inventory"][0];
+      this.invent.setItemByKey(newItem, this.editingItemKey);
+      this.fireAlert("success", "Success", "Item removed.");
+      this.$refs["edit-modal"].hide();
+      this.$forceUpdate();
+    },
+    removeAdditionalItem(index) {
+      this.invent.removeAdditionalItem(index);
+      this.fireAlert("success", "Success", "Additional item removed.");
+      this.$forceUpdate();
     },
     searchItems() {
       // Search term

@@ -1,8 +1,7 @@
-
-import newInventory from '../../new.json';
+import newInventory from "../../new.json";
 
 export default class Inventory {
-    constructor (obj = false) {
+    constructor(obj = false) {
         if (!obj) obj = newInventory;
         this.inventory = obj.inventory;
         this.equipment = obj.equipment;
@@ -37,7 +36,7 @@ export default class Inventory {
     }
 
     setItemByKey(item, key) {
-        if (key == 'additional') {
+        if (key == "additional") {
             this.additionalFilteredItems[item.id] = item;
             return this;
         }
@@ -50,5 +49,8 @@ export default class Inventory {
     }
     setNotes(newNotes) {
         this.notes = newNotes;
+    }
+    removeAdditionalItem(index) {
+        delete this.additionalFilteredItems[index];
     }
 }
