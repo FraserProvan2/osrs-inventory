@@ -218,9 +218,23 @@
     <!-- Spell Book -->
     <div class="mb-3">
       <h5 class="text-center">Spell Book</h5>
-      <div class="grid-row">
-        <div class="grid-item pt-1">
-          <img :src="`/img/spellbook-icons/${invent.getSpellBook()}.png`" />
+      <div class="grid-row" v-if="this.showSpellBookChooser == false">
+        <div class="grid-item">
+          <img :src="`/img/spellbook-icons/${invent.getSpellBook()}.png`" @click="showSpellBookChooser = true"/>
+        </div>
+      </div>
+      <div class="grid-row" v-if="this.showSpellBookChooser">
+        <div class="grid-item" @click="updateSpellBook(0)">
+          <img :src="`/img/spellbook-icons/0.png`" />
+        </div>
+        <div class="grid-item" @click="updateSpellBook(1)">
+          <img :src="`/img/spellbook-icons/1.png`" />
+        </div>
+        <div class="grid-item" @click="updateSpellBook(2)">
+          <img :src="`/img/spellbook-icons/2.png`" />
+        </div>
+        <div class="grid-item" @click="updateSpellBook(3)">
+          <img :src="`/img/spellbook-icons/3.png`" />
         </div>
       </div>
     </div>
@@ -244,7 +258,7 @@
         </li>
         <li class="unstyled py-0 text-success" v-if="isEdit">
           <button
-            class="btn btn-sm btn-success my-1 px-3"
+            class="btn btn-sm btn-success mt-2 px-3"
             @click="itemClick(null, 'additional')"
           >
             Add Item
@@ -355,6 +369,7 @@ export default {
       notes: false,
       pendingFuzzy: false,
       pendingQuantity: false,
+      showSpellBookChooser: false,
       unsaved: false,
     };
   },
@@ -418,6 +433,12 @@ export default {
           : "Item updated."
       );
       this.$forceUpdate();
+    },
+    updateSpellBook(spellBookKey) {
+      this.unsaved = true;
+      this.showSpellBookChooser = false;
+      this.invent.setSpellBook(spellBookKey);
+      this.fireAlert("success", "Success", "Spell book updated.");
     },
     updateNote() {
       this.unsaved = true;

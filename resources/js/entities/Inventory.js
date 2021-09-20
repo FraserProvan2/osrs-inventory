@@ -47,6 +47,9 @@ export default class Inventory {
 
         return this;
     }
+    setSpellBook(key) {
+        this.spellBook = key;
+    }
     setNotes(newNotes) {
         this.notes = newNotes;
     }

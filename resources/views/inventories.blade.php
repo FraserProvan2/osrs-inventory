@@ -4,17 +4,29 @@
 <div class="row justify-content-center">
     <div class="col-md-4">
         <div class="card">
-            <div class="card-header">Inventory Viewer</div>
+            <div class="card-header">Inventory Viewer
+                <span class="float-right">
+                    <i class="fa fa-thumbs-up"></i>
+                    <i class="fa fa-thumbs-down"></i>
+                </span>
+            </div>
             <div class="card-body">
                 <inventory-builder />
             </div>
         </div>
     </div>
     <div class="col-md-8">
-        <div class="card">
-            <div class="card-header">Search Inventories</div>
+        <div class="card mb-3">
+            <div class="card-header">By ssj krun</div>
             <div class="card-body">
                 List of Inventories
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Comments</div>
+            <div class="card-body">
+                
             </div>
         </div>
     </div>
