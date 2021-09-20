@@ -1,5 +1,9 @@
 <template>
   <div class="w-100">
+    <div class="text-center text-warning small mb-2" v-if="this.unsaved">
+      <i class="fa fa-info-circle"></i> You have unsaved changes
+    </div>
+
     <!-- Inventory -->
     <div class="mb-3">
       <h5 class="text-center">Inventory</h5>
@@ -270,18 +274,9 @@
     <button class="btn btn-success"><i class="fa fa-save"></i></button>
 
     <!-- Modal -->
-    <b-modal
-      ref="edit-modal"
-      hide-footer
-      :title="
-        this.editingItemKey == 'additional'
-          ? 'Add additional item'
-          : `Edit Item - ${this.editingItem.name}`
-      "
-    >
-      <h6 v-if="this.editingItemKey != 'additional'">Update existing item</h6>
+    <b-modal ref="edit-modal" hide-footer :title="this.getModalTitle()">
       <div class="d-block">
-        <div class="row" v-if="this.editingItemKey != 'additional'">
+        <div class="row mb-3" v-if="this.editingItemKey != 'additional' && this.editingItem.id != -1">
           <div class="col-md-6">
             <div class="input-group">
               <span class="input-group-text">Qty</span>
@@ -314,9 +309,8 @@
             </button>
           </div>
         </div>
-        <br />
 
-        <h6 v-if="this.editingItemKey != 'additional'">Change item</h6>
+        <h6 v-if="this.editingItemKey != 'additional' && this.editingItem.id != -1">Change item</h6>
         <input
           class="form-control mb-1"
           type="text"
@@ -361,6 +355,7 @@ export default {
       notes: false,
       pendingFuzzy: false,
       pendingQuantity: false,
+      unsaved: false,
     };
   },
   methods: {
@@ -385,6 +380,7 @@ export default {
       }
     },
     updateFuzzyOrQty() {
+      this.unsaved = true;
       this.updateItem(
         this.editingItem,
         this.pendingQuantity,
@@ -392,6 +388,8 @@ export default {
       );
     },
     updateItem(item, quantity = 1, fuzzy = false) {
+      this.unsaved = true;
+
       // Update object
       let itemData = {
         fuzzy,
@@ -422,9 +420,11 @@ export default {
       this.$forceUpdate();
     },
     updateNote() {
+      this.unsaved = true;
       this.invent.setNotes(this.notes);
     },
     removeItem() {
+      this.unsaved = true;
       const newItem = new Inventory()["inventory"][0];
       this.invent.setItemByKey(newItem, this.editingItemKey);
       this.fireAlert("success", "Success", "Item removed.");
@@ -432,9 +432,15 @@ export default {
       this.$forceUpdate();
     },
     removeAdditionalItem(index) {
+      this.unsaved = true;
       this.invent.removeAdditionalItem(index);
       this.fireAlert("success", "Success", "Additional item removed.");
       this.$forceUpdate();
+    },
+    getModalTitle() {
+      if (this.editingItemKey == "additional") return "Add additional item";
+      if (this.editingItem.id == -1) return "Add item";
+      return this.editingItem.name;
     },
     searchItems() {
       // Search term
@@ -463,8 +469,10 @@ export default {
       return BASE_URL + itemUrlName;
     },
     exportInvent() {
+      const inventJson = JSON.stringify(this.invent);
+      Utils.copyToClipboard(inventJson);
+      console.log(inventJson);
       this.fireAlert("success", "Success", "Copied to clipboard.");
-      Utils.copyToClipboard(JSON.stringify(this.invent));
     },
     fireAlert(type, title, text) {
       this.$notify({ group: "all", title, type, text, duration: 2500 });
