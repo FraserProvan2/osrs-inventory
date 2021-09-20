@@ -1,7 +1,7 @@
 <template>
   <div class="w-100">
-    <div class="text-center text-warning small mb-2" v-if="this.unsaved">
-      <i class="fa fa-info-circle"></i> You have unsaved changes
+    <div class="text-center text-warning small mb-2" v-if="this.unsaved && this.isEdit">
+      <i class="fa fa-exclamation-circle"></i> You have unsaved changes
     </div>
 
     <!-- Inventory -->
@@ -220,10 +220,10 @@
       <h5 class="text-center">Spell Book</h5>
       <div class="grid-row" v-if="this.showSpellBookChooser == false">
         <div class="grid-item">
-          <img :src="`/img/spellbook-icons/${invent.getSpellBook()}.png`" @click="showSpellBookChooser = true"/>
+          <img :src="`/img/spellbook-icons/${invent.getSpellBook()}.png`" @click="spellBookClick"/>
         </div>
       </div>
-      <div class="grid-row" v-if="this.showSpellBookChooser">
+      <div class="grid-row" v-if="this.isEdit && this.showSpellBookChooser">
         <div class="grid-item" @click="updateSpellBook(0)">
           <img :src="`/img/spellbook-icons/0.png`" />
         </div>
@@ -351,16 +351,12 @@ import ItemIndex from "../../items.json";
 import Inventory from "../entities/Inventory";
 import Utils from "../Utils";
 
-// temp
-import zulrahExample from "../../zulrah.json";
-import vorkathExample from "../../vorkath.json";
-import jadExample from "../../jad.json";
-
 export default {
+  props: ['setup', 'edit'],
   data() {
     return {
-      invent: new Inventory(zulrahExample),
-      isEdit: true,
+      invent: new Inventory(),
+      isEdit: false,
       itemSearch: "",
       itemSearchResult: false,
       hasRunePouch: false,
@@ -393,6 +389,9 @@ export default {
       } else {
         window.open(this.getWikiLink(item), "_blank").focus();
       }
+    },
+    spellBookClick() {
+      if (this.isEdit) this.showSpellBookChooser = true;
     },
     updateFuzzyOrQty() {
       this.unsaved = true;
@@ -496,11 +495,17 @@ export default {
       this.fireAlert("success", "Success", "Copied to clipboard.");
     },
     fireAlert(type, title, text) {
-      this.$notify({ group: "all", title, type, text, duration: 2500 });
+      if (this.isEdit) {
+        this.$notify({ group: "all", title, type, text, duration: 2500 });
+      }
     },
   },
   mounted() {
-    // this.invent = new Inventory(vorkathExample);
+    this.invent = new Inventory(JSON.parse(this.setup));
+    if (this.edit == '1') {
+      this.isEdit = true;
+    }
+
     this.notes = this.invent.notes;
     this.checkForRunePouch();
   },

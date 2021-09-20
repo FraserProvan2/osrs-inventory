@@ -1,0 +1,324 @@
+{
+    "inventory": [
+        {
+            "id": 8013,
+            "name": "Teleport to house",
+            "quantity": 10,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 11742,
+            "name": "Taverley teleport",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 22997,
+            "name": "Bottomless compost bucket",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 952,
+            "name": "Spade",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 995,
+            "name": "Coins",
+            "quantity": 55728850,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 5373,
+            "name": "Yew sapling",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 5373,
+            "name": "Yew sapling",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 5373,
+            "name": "Yew sapling",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 5373,
+            "name": "Yew sapling",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 5373,
+            "name": "Yew sapling",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 5373,
+            "name": "Yew sapling",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        }
+    ],
+    "equipment": [
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        }
+    ],
+    "additionalFilteredItems": {
+        "21480": {
+            "id": 21480,
+            "name": "Mahogany sapling",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        "21483": {
+            "id": 21483,
+            "name": "Ultracompost",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        }
+    },
+    "name": "Tree Run",
+    "notes": "",
+    "highlightColor": { "value": -65536, "falpha": 0.0 },
+    "highlightDifference": false,
+    "filterBank": true,
+    "unorderedHighlight": false,
+    "spellBook": 1,
+    "Id": 9223372036854775807
+}

@@ -1,0 +1,340 @@
+{
+    "inventory": [
+        {
+            "id": 21946,
+            "name": "Diamond dragon bolts (e)",
+            "quantity": 250,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 2434,
+            "name": "Prayer potion(4)",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 2434,
+            "name": "Prayer potion(4)",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 2434,
+            "name": "Prayer potion(4)",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 12913,
+            "name": "Anti-venom+(4)",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 3144,
+            "name": "Cooked karambwan",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 385,
+            "name": "Shark",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 2444,
+            "name": "Ranging potion(4)",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 11951,
+            "name": "Extended antifire(4)",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 12791,
+            "name": "Rune pouch",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        }
+    ],
+    "equipment": [
+        {
+            "id": 11664,
+            "name": "Void ranger helm",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 22109,
+            "name": "Ava\u0027s assembler",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 12018,
+            "name": "Salve amulet(ei)",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 21012,
+            "name": "Dragon hunter crossbow",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 13072,
+            "name": "Elite void top",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": 22002,
+            "name": "Dragonfire ward",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 13073,
+            "name": "Elite void robe",
+            "quantity": 1,
+            "fuzzy": true,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 8842,
+            "name": "Void knight gloves",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 13237,
+            "name": "Pegasian boots",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": -1,
+            "name": "null",
+            "quantity": 0,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 11771,
+            "name": "Archers ring (i)",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 21944,
+            "name": "Ruby dragon bolts (e)",
+            "quantity": 500,
+            "fuzzy": true,
+            "stackCompare": "None"
+        }
+    ],
+    "rune_pouch": [
+        {
+            "id": 563,
+            "name": "Law",
+            "quantity": 200,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 562,
+            "name": "Chaos",
+            "quantity": 500,
+            "fuzzy": false,
+            "stackCompare": "None"
+        },
+        {
+            "id": 4696,
+            "name": "Dust",
+            "quantity": 1000,
+            "fuzzy": false,
+            "stackCompare": "None"
+        }
+    ],
+    "additionalFilteredItems": {
+        "391": {
+            "id": 391,
+            "name": "Manta ray",
+            "quantity": 1,
+            "fuzzy": false,
+            "stackCompare": "None"
+        }
+    },
+    "name": "Vorkath",
+    "notes": "Ruby -\u003e Diamond @ 265hp (25%)\n\nQuick Prayers:\n\tProtect Range\n\tRigour\n\n",
+    "highlightColor": { "value": -65536, "falpha": 0.0 },
+    "highlightDifference": false,
+    "filterBank": true,
+    "unorderedHighlight": false,
+    "spellBook": 0,
+    "Id": 9223372036854775807
+}

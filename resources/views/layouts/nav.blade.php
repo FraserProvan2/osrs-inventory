@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <a class="nav-link {{ Route::currentRouteNamed('inventories') ? 'active' : '' }}" href="{{ route('inventories') }}">{{ __('Inventories') }}</a>
+                {{-- <a class="nav-link {{ Route::currentRouteNamed('inventories') ? 'active' : '' }}" href="{{ route('inventories') }}">{{ __('Inventories') }}</a> --}}
                 <a class="nav-link {{ Route::currentRouteNamed('about') ? 'active' : '' }}" href="{{ route('about') }}">{{ __('About') }}</a>
             </ul>
 

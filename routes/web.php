@@ -21,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
-Route::get('/inventories', [App\Http\Controllers\InventoriesController::class, 'index'])->name('inventories');
+Route::get('/inventory/{id}', [App\Http\Controllers\InventoryController::class, 'show'])->name('show');
