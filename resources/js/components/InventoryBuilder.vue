@@ -1,296 +1,388 @@
 <template>
   <div class="w-100">
-    <div class="text-center text-warning small mb-2" v-if="this.unsaved && this.isEdit">
+    <!-- Controls -->
+    <div class="d-flex mb-4">
+      <button
+        class="btn btn-primary mx-1 py-2 flex-fill"
+        @click="exportInvent"
+      >
+        <i class="fa fa-copy fa-lg"></i>
+      </button>
+      <button class="btn btn-primary mx-1 py-2 w-25">
+        <i class="fa fa-share-alt fa-lg"></i>
+      </button>
+      <button class="btn btn-success mx-1 py-2 w-25" v-if="this.edit">
+        <i class="fa fa-save fa-lg"></i>
+      </button>
+    </div>
+
+    <!-- Unsaved changes message -->
+    <div
+      class="text-center text-warning small mb-2"
+      v-if="this.unsaved && this.edit"
+    >
       <i class="fa fa-exclamation-circle"></i> You have unsaved changes
     </div>
 
-    <!-- Inventory -->
-    <div class="mb-3">
-      <h5 class="text-center">Inventory</h5>
-      <div class="grid-row">
-        <inventory-item
-          :item="invent.getInventory()[0]"
-          @click.native="itemClick(invent.getInventory()[0], 'inventory.0')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[1]"
-          @click.native="itemClick(invent.getInventory()[1], 'inventory.1')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[2]"
-          @click.native="itemClick(invent.getInventory()[2], 'inventory.2')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[3]"
-          @click.native="itemClick(invent.getInventory()[3], 'inventory.3')"
-        />
-      </div>
-      <div class="grid-row">
-        <inventory-item
-          :item="invent.getInventory()[4]"
-          @click.native="itemClick(invent.getInventory()[4], 'inventory.4')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[5]"
-          @click.native="itemClick(invent.getInventory()[5], 'inventory.5')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[6]"
-          @click.native="itemClick(invent.getInventory()[6], 'inventory.6')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[7]"
-          @click.native="itemClick(invent.getInventory()[7], 'inventory.7')"
-        />
-      </div>
-      <div class="grid-row">
-        <inventory-item
-          :item="invent.getInventory()[8]"
-          @click.native="itemClick(invent.getInventory()[8], 'inventory.8')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[9]"
-          @click.native="itemClick(invent.getInventory()[9], 'inventory.9')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[10]"
-          @click.native="itemClick(invent.getInventory()[10], 'inventory.10')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[11]"
-          @click.native="itemClick(invent.getInventory()[11], 'inventory.11')"
-        />
-      </div>
-      <div class="grid-row">
-        <inventory-item
-          :item="invent.getInventory()[12]"
-          @click.native="itemClick(invent.getInventory()[12], 'inventory.12')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[13]"
-          @click.native="itemClick(invent.getInventory()[13], 'inventory.13')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[14]"
-          @click.native="itemClick(invent.getInventory()[14], 'inventory.14')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[15]"
-          @click.native="itemClick(invent.getInventory()[15], 'inventory.15')"
-        />
-      </div>
-      <div class="grid-row">
-        <inventory-item
-          :item="invent.getInventory()[16]"
-          @click.native="itemClick(invent.getInventory()[16], 'inventory.16')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[17]"
-          @click.native="itemClick(invent.getInventory()[17], 'inventory.17')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[18]"
-          @click.native="itemClick(invent.getInventory()[18], 'inventory.18')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[19]"
-          @click.native="itemClick(invent.getInventory()[19], 'inventory.19')"
-        />
-      </div>
-      <div class="grid-row">
-        <inventory-item
-          :item="invent.getInventory()[20]"
-          @click.native="itemClick(invent.getInventory()[20], 'inventory.20')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[21]"
-          @click.native="itemClick(invent.getInventory()[21], 'inventory.21')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[22]"
-          @click.native="itemClick(invent.getInventory()[22], 'inventory.22')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[23]"
-          @click.native="itemClick(invent.getInventory()[23], 'inventory.23')"
-        />
-      </div>
-      <div class="grid-row">
-        <inventory-item
-          :item="invent.getInventory()[24]"
-          @click.native="itemClick(invent.getInventory()[24], 'inventory.24')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[25]"
-          @click.native="itemClick(invent.getInventory()[25], 'inventory.25')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[26]"
-          @click.native="itemClick(invent.getInventory()[26], 'inventory.26')"
-        />
-        <inventory-item
-          :item="invent.getInventory()[27]"
-          @click.native="itemClick(invent.getInventory()[27], 'inventory.27')"
-        />
-      </div>
-    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Equipment -->
+        <div class="mb-3">
+          <div class="text-center mb-2">
+            <h5>Equipment</h5>
+            <div class="grid-row">
+              <inventory-item
+                :item="invent.getEquipment()[0]"
+                @click.native="
+                  itemClick(invent.getEquipment()[0], 'equipment.0')
+                "
+              />
+            </div>
+            <div class="grid-row">
+              <inventory-item
+                :item="invent.getEquipment()[1]"
+                @click.native="
+                  itemClick(invent.getEquipment()[1], 'equipment.1')
+                "
+              />
+              <inventory-item
+                :item="invent.getEquipment()[2]"
+                @click.native="
+                  itemClick(invent.getEquipment()[2], 'equipment.2')
+                "
+              />
+              <inventory-item
+                :item="invent.getEquipment()[13]"
+                @click.native="
+                  itemClick(invent.getEquipment()[13], 'equipment.13')
+                "
+              />
+            </div>
+            <div class="grid-row">
+              <inventory-item
+                :item="invent.getEquipment()[3]"
+                @click.native="
+                  itemClick(invent.getEquipment()[3], 'equipment.3')
+                "
+              />
+              <inventory-item
+                :item="invent.getEquipment()[4]"
+                @click.native="
+                  itemClick(invent.getEquipment()[4], 'equipment.4')
+                "
+              />
+              <inventory-item
+                :item="invent.getEquipment()[5]"
+                @click.native="
+                  itemClick(invent.getEquipment()[5], 'equipment.5')
+                "
+              />
+            </div>
+            <div class="grid-row">
+              <inventory-item
+                :item="invent.getEquipment()[7]"
+                @click.native="
+                  itemClick(invent.getEquipment()[7], 'equipment.7')
+                "
+              />
+            </div>
+            <div class="grid-row">
+              <inventory-item
+                :item="invent.getEquipment()[9]"
+                @click.native="
+                  itemClick(invent.getEquipment()[9], 'equipment.9')
+                "
+              />
+              <inventory-item
+                :item="invent.getEquipment()[10]"
+                @click.native="
+                  itemClick(invent.getEquipment()[10], 'equipment.10')
+                "
+              />
+              <inventory-item
+                :item="invent.getEquipment()[12]"
+                @click.native="
+                  itemClick(invent.getEquipment()[12], 'equipment.12')
+                "
+              />
+            </div>
+          </div>
+        </div>
 
-    <!-- Rune Pouch -->
-    <div class="mb-3" v-if="this.hasRunePouch">
-      <h5 class="text-center">Rune Pouch</h5>
-      <div class="grid-row">
-        <inventory-item
-          :item="invent.getRunePouch()[0]"
-          @click.native="itemClick(invent.getRunePouch()[0], 'rune_pouch.0')"
-        />
-        <inventory-item
-          :item="invent.getRunePouch()[1]"
-          @click.native="itemClick(invent.getRunePouch()[1], 'rune_pouch.1')"
-        />
-        <inventory-item
-          :item="invent.getRunePouch()[2]"
-          @click.native="itemClick(invent.getRunePouch()[2], 'rune_pouch.2')"
-        />
-      </div>
-    </div>
+        <!-- Rune Pouch -->
+        <div class="mb-3" v-if="this.hasRunePouch">
+          <h5 class="text-center">Rune Pouch</h5>
+          <div class="grid-row">
+            <inventory-item
+              :item="invent.getRunePouch()[0]"
+              @click.native="
+                itemClick(invent.getRunePouch()[0], 'rune_pouch.0')
+              "
+            />
+            <inventory-item
+              :item="invent.getRunePouch()[1]"
+              @click.native="
+                itemClick(invent.getRunePouch()[1], 'rune_pouch.1')
+              "
+            />
+            <inventory-item
+              :item="invent.getRunePouch()[2]"
+              @click.native="
+                itemClick(invent.getRunePouch()[2], 'rune_pouch.2')
+              "
+            />
+          </div>
+        </div>
 
-    <!-- Equipment -->
-    <div class="mb-3">
-      <div class="text-center mb-2">
-        <h5>Equipment</h5>
-        <div class="grid-row">
-          <inventory-item
-            :item="invent.getEquipment()[0]"
-            @click.native="itemClick(invent.getEquipment()[0], 'equipment.0')"
-          />
+        <!-- Spell Book -->
+        <div class="mb-3">
+          <h5 class="text-center">Spell Book</h5>
+          <div class="grid-row" v-if="this.showSpellBookChooser == false">
+            <div class="grid-item">
+              <img
+                :src="`/img/spellbook-icons/${invent.getSpellBook()}.png`"
+                @click="spellBookClick"
+              />
+            </div>
+          </div>
+          <div class="grid-row" v-if="this.edit && this.showSpellBookChooser">
+            <div class="grid-item" @click="updateSpellBook(0)">
+              <img :src="`/img/spellbook-icons/0.png`" />
+            </div>
+            <div class="grid-item" @click="updateSpellBook(1)">
+              <img :src="`/img/spellbook-icons/1.png`" />
+            </div>
+            <div class="grid-item" @click="updateSpellBook(2)">
+              <img :src="`/img/spellbook-icons/2.png`" />
+            </div>
+            <div class="grid-item" @click="updateSpellBook(3)">
+              <img :src="`/img/spellbook-icons/3.png`" />
+            </div>
+          </div>
         </div>
-        <div class="grid-row">
-          <inventory-item
-            :item="invent.getEquipment()[1]"
-            @click.native="itemClick(invent.getEquipment()[1], 'equipment.1')"
-          />
-          <inventory-item
-            :item="invent.getEquipment()[2]"
-            @click.native="itemClick(invent.getEquipment()[2], 'equipment.2')"
-          />
-          <inventory-item
-            :item="invent.getEquipment()[13]"
-            @click.native="itemClick(invent.getEquipment()[13], 'equipment.13')"
-          />
-        </div>
-        <div class="grid-row">
-          <inventory-item
-            :item="invent.getEquipment()[3]"
-            @click.native="itemClick(invent.getEquipment()[3], 'equipment.3')"
-          />
-          <inventory-item
-            :item="invent.getEquipment()[4]"
-            @click.native="itemClick(invent.getEquipment()[4], 'equipment.4')"
-          />
-          <inventory-item
-            :item="invent.getEquipment()[5]"
-            @click.native="itemClick(invent.getEquipment()[5], 'equipment.5')"
-          />
-        </div>
-        <div class="grid-row">
-          <inventory-item
-            :item="invent.getEquipment()[7]"
-            @click.native="itemClick(invent.getEquipment()[7], 'equipment.7')"
-          />
-        </div>
-        <div class="grid-row">
-          <inventory-item
-            :item="invent.getEquipment()[9]"
-            @click.native="itemClick(invent.getEquipment()[9], 'equipment.9')"
-          />
-          <inventory-item
-            :item="invent.getEquipment()[10]"
-            @click.native="itemClick(invent.getEquipment()[10], 'equipment.10')"
-          />
-          <inventory-item
-            :item="invent.getEquipment()[12]"
-            @click.native="itemClick(invent.getEquipment()[12], 'equipment.12')"
-          />
-        </div>
-      </div>
-    </div>
 
-    <!-- Spell Book -->
-    <div class="mb-3">
-      <h5 class="text-center">Spell Book</h5>
-      <div class="grid-row" v-if="this.showSpellBookChooser == false">
-        <div class="grid-item">
-          <img :src="`/img/spellbook-icons/${invent.getSpellBook()}.png`" @click="spellBookClick"/>
-        </div>
-      </div>
-      <div class="grid-row" v-if="this.isEdit && this.showSpellBookChooser">
-        <div class="grid-item" @click="updateSpellBook(0)">
-          <img :src="`/img/spellbook-icons/0.png`" />
-        </div>
-        <div class="grid-item" @click="updateSpellBook(1)">
-          <img :src="`/img/spellbook-icons/1.png`" />
-        </div>
-        <div class="grid-item" @click="updateSpellBook(2)">
-          <img :src="`/img/spellbook-icons/2.png`" />
-        </div>
-        <div class="grid-item" @click="updateSpellBook(3)">
-          <img :src="`/img/spellbook-icons/3.png`" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Additional Filtered Items -->
-    <div class="mb-3">
-      <h5 class="text-center">Additional Filtered Items</h5>
-      <ul class="list-group list-unstyled text-center">
-        <li
-          class="unstyled py-0"
-          v-for="(item, index) in this.invent.getAdditionalFilteredItems()"
-          :key="index"
-        >
-          <a :href="getWikiLink(item)" target="_blank">{{ item.name }}</a>
-          <a
-            class="text-danger small"
-            v-if="isEdit"
-            @click="removeAdditionalItem(index)"
-            >(remove)</a
+        <!-- Notes -->
+        <div class="mb-3">
+          <h5 class="text-center">Notes</h5>
+          <textarea
+            class="notes"
+            name="notes"
+            rows="7"
+            cols="50"
+            v-model="notes"
+            :readonly="!this.edit"
+            @keyup="updateNote()"
           >
-        </li>
-        <li class="unstyled py-0 text-success" v-if="isEdit">
-          <button
-            class="btn btn-sm btn-success mt-2 px-3"
-            @click="itemClick(null, 'additional')"
-          >
-            Add Item
-          </button>
-        </li>
-      </ul>
-    </div>
+          </textarea>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Inventory -->
+        <div class="mb-3">
+          <h5 class="text-center">Inventory</h5>
+          <div class="grid-row">
+            <inventory-item
+              :item="invent.getInventory()[0]"
+              @click.native="itemClick(invent.getInventory()[0], 'inventory.0')"
+            />
+            <inventory-item
+              :item="invent.getInventory()[1]"
+              @click.native="itemClick(invent.getInventory()[1], 'inventory.1')"
+            />
+            <inventory-item
+              :item="invent.getInventory()[2]"
+              @click.native="itemClick(invent.getInventory()[2], 'inventory.2')"
+            />
+            <inventory-item
+              :item="invent.getInventory()[3]"
+              @click.native="itemClick(invent.getInventory()[3], 'inventory.3')"
+            />
+          </div>
+          <div class="grid-row">
+            <inventory-item
+              :item="invent.getInventory()[4]"
+              @click.native="itemClick(invent.getInventory()[4], 'inventory.4')"
+            />
+            <inventory-item
+              :item="invent.getInventory()[5]"
+              @click.native="itemClick(invent.getInventory()[5], 'inventory.5')"
+            />
+            <inventory-item
+              :item="invent.getInventory()[6]"
+              @click.native="itemClick(invent.getInventory()[6], 'inventory.6')"
+            />
+            <inventory-item
+              :item="invent.getInventory()[7]"
+              @click.native="itemClick(invent.getInventory()[7], 'inventory.7')"
+            />
+          </div>
+          <div class="grid-row">
+            <inventory-item
+              :item="invent.getInventory()[8]"
+              @click.native="itemClick(invent.getInventory()[8], 'inventory.8')"
+            />
+            <inventory-item
+              :item="invent.getInventory()[9]"
+              @click.native="itemClick(invent.getInventory()[9], 'inventory.9')"
+            />
+            <inventory-item
+              :item="invent.getInventory()[10]"
+              @click.native="
+                itemClick(invent.getInventory()[10], 'inventory.10')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[11]"
+              @click.native="
+                itemClick(invent.getInventory()[11], 'inventory.11')
+              "
+            />
+          </div>
+          <div class="grid-row">
+            <inventory-item
+              :item="invent.getInventory()[12]"
+              @click.native="
+                itemClick(invent.getInventory()[12], 'inventory.12')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[13]"
+              @click.native="
+                itemClick(invent.getInventory()[13], 'inventory.13')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[14]"
+              @click.native="
+                itemClick(invent.getInventory()[14], 'inventory.14')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[15]"
+              @click.native="
+                itemClick(invent.getInventory()[15], 'inventory.15')
+              "
+            />
+          </div>
+          <div class="grid-row">
+            <inventory-item
+              :item="invent.getInventory()[16]"
+              @click.native="
+                itemClick(invent.getInventory()[16], 'inventory.16')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[17]"
+              @click.native="
+                itemClick(invent.getInventory()[17], 'inventory.17')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[18]"
+              @click.native="
+                itemClick(invent.getInventory()[18], 'inventory.18')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[19]"
+              @click.native="
+                itemClick(invent.getInventory()[19], 'inventory.19')
+              "
+            />
+          </div>
+          <div class="grid-row">
+            <inventory-item
+              :item="invent.getInventory()[20]"
+              @click.native="
+                itemClick(invent.getInventory()[20], 'inventory.20')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[21]"
+              @click.native="
+                itemClick(invent.getInventory()[21], 'inventory.21')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[22]"
+              @click.native="
+                itemClick(invent.getInventory()[22], 'inventory.22')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[23]"
+              @click.native="
+                itemClick(invent.getInventory()[23], 'inventory.23')
+              "
+            />
+          </div>
+          <div class="grid-row">
+            <inventory-item
+              :item="invent.getInventory()[24]"
+              @click.native="
+                itemClick(invent.getInventory()[24], 'inventory.24')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[25]"
+              @click.native="
+                itemClick(invent.getInventory()[25], 'inventory.25')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[26]"
+              @click.native="
+                itemClick(invent.getInventory()[26], 'inventory.26')
+              "
+            />
+            <inventory-item
+              :item="invent.getInventory()[27]"
+              @click.native="
+                itemClick(invent.getInventory()[27], 'inventory.27')
+              "
+            />
+          </div>
+        </div>
 
-    <!-- Notes -->
-    <div class="mb-3">
-      <h5 class="text-center">Notes</h5>
-      <textarea
-        class="notes"
-        name="notes"
-        rows="7"
-        cols="50"
-        v-model="notes"
-        :readonly="!this.isEdit"
-        @keyup="updateNote()"
-      >
-      </textarea>
+        <!-- Additional Filtered Items -->
+        <div class="mb-3">
+          <h5 class="text-center">Additional Filtered Items</h5>
+          <ul class="list-group list-unstyled text-center">
+            <li
+              class="unstyled py-0"
+              v-for="(item, index) in this.invent.getAdditionalFilteredItems()"
+              :key="index"
+            >
+              <a :href="getWikiLink(item)" target="_blank">{{ item.name }}</a>
+              <a
+                class="text-danger small"
+                v-if="edit"
+                @click="removeAdditionalItem(index)"
+                >(remove)</a
+              >
+            </li>
+            <li class="unstyled py-0 text-success" v-if="edit">
+              <button
+                class="btn btn-sm btn-success mt-2 px-3"
+                @click="itemClick(null, 'additional')"
+              >
+                Add Item
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <button class="btn btn-secondary" @click="exportInvent">
-      <i class="fa fa-copy"></i>
-    </button>
-    <button class="btn btn-success"><i class="fa fa-save"></i></button>
 
     <!-- Modal -->
     <b-modal ref="edit-modal" hide-footer :title="this.getModalTitle()">
       <div class="d-block">
-        <div class="row mb-3" v-if="this.editingItemKey != 'additional' && this.editingItem.id != -1">
+        <div
+          class="row mb-3"
+          v-if="
+            this.editingItemKey != 'additional' && this.editingItem.id != -1
+          "
+        >
           <div class="col-md-6">
             <div class="input-group">
               <span class="input-group-text">Qty</span>
@@ -324,7 +416,13 @@
           </div>
         </div>
 
-        <h6 v-if="this.editingItemKey != 'additional' && this.editingItem.id != -1">Change item</h6>
+        <h6
+          v-if="
+            this.editingItemKey != 'additional' && this.editingItem.id != -1
+          "
+        >
+          Change item
+        </h6>
         <input
           class="form-control mb-1"
           type="text"
@@ -352,11 +450,10 @@ import Inventory from "../entities/Inventory";
 import Utils from "../Utils";
 
 export default {
-  props: ['setup', 'edit'],
+  props: ["setup", "edit"],
   data() {
     return {
       invent: new Inventory(),
-      isEdit: false,
       itemSearch: "",
       itemSearchResult: false,
       hasRunePouch: false,
@@ -371,7 +468,7 @@ export default {
   },
   methods: {
     itemClick(item, key) {
-      if (this.isEdit) {
+      if (this.edit) {
         if (key == "additional") {
           this.editingItemKey = "additional";
           this.editingItem = {
@@ -391,7 +488,7 @@ export default {
       }
     },
     spellBookClick() {
-      if (this.isEdit) this.showSpellBookChooser = true;
+      if (this.edit) this.showSpellBookChooser = true;
     },
     updateFuzzyOrQty() {
       this.unsaved = true;
@@ -495,17 +592,13 @@ export default {
       this.fireAlert("success", "Success", "Copied to clipboard.");
     },
     fireAlert(type, title, text) {
-      if (this.isEdit) {
+      if (this.edit) {
         this.$notify({ group: "all", title, type, text, duration: 2500 });
       }
     },
   },
   mounted() {
-    this.invent = new Inventory(JSON.parse(this.setup));
-    if (this.edit == '1') {
-      this.isEdit = true;
-    }
-
+    this.invent = new Inventory(this.setup);
     this.notes = this.invent.notes;
     this.checkForRunePouch();
   },

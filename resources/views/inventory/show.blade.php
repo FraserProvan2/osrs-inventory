@@ -2,14 +2,14 @@
 
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-md-4">
+    <div class="col-md-7">
         <div class="card">
             <div class="card-body">
-                <inventory-builder setup="{{ $inventory->data }}" edit="{{ $is_edit }}" />
+                <inventory-builder :setup="{{ $inventory->data }}" :edit="{{ json_encode($is_edit) }}" />
             </div>
         </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-5">
         <div class="card mb-3">
             <div class="card-header">
                 {{ $inventory->name }}
