@@ -5,10 +5,14 @@
       <button class="btn btn-primary mx-1 py-2 flex-fill" @click="exportInvent">
         <i class="fa fa-copy fa-lg"></i>
       </button>
-      <button class="btn btn-primary mx-1 py-2 w-25">
+      <button class="btn btn-primary mx-1 py-2 w-25" @click="share">
         <i class="fa fa-share-alt fa-lg"></i>
       </button>
-      <button class="btn btn-success mx-1 py-2 w-25" v-if="this.edit">
+      <button
+        class="btn btn-success mx-1 py-2 w-25"
+        v-if="this.edit"
+        @click="save"
+      >
         <i class="fa fa-save fa-lg"></i>
       </button>
     </div>
@@ -162,7 +166,7 @@
         <div class="mb-3">
           <h5 class="text-center">Notes</h5>
           <textarea
-            class="notes"
+            class="notes p-2"
             name="notes"
             rows="7"
             cols="50"
@@ -437,7 +441,6 @@
         </div>
       </div>
     </b-modal>
-    <notifications group="all" position="top right" />
   </div>
 </template>
 
@@ -551,6 +554,10 @@ export default {
       this.fireAlert("success", "Success", "Additional item removed.");
       this.$forceUpdate();
     },
+    save() {
+      // TODO
+      console.log('save');
+    },
     getModalTitle() {
       if (this.editingItemKey == "additional") return "Add additional item";
       if (this.editingItem.id == -1) return "Add item";
@@ -587,6 +594,10 @@ export default {
       Utils.copyToClipboard(inventJson);
       console.log(inventJson);
       this.fireAlert("success", "Success", "Copied to clipboard.");
+    },
+    share() {
+      // TODO
+      console.log('share');
     },
     fireAlert(type, title, text) {
       if (this.edit) {

@@ -28,6 +28,8 @@
             @include('layouts.nav')
             @yield('content')
             @include('layouts.footer')
+
+            <notifications group="all" position="top right" />
         </main>
     </div>
 </body>

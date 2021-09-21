@@ -1,14 +1,18 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
 
 // Bootstrap
-@import 'bootstrap/dist/css/bootstrap.css';
-@import 'bootstrap-vue/dist/bootstrap-vue.css';
+@import "bootstrap/dist/css/bootstrap.css";
+@import "bootstrap-vue/dist/bootstrap-vue.css";
 @import "node_modules/bootswatch/dist/darkly/variables";
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 @import "node_modules/bootswatch/dist/darkly/bootswatch";
 @import "bootstrap-override.scss";
 
-// Vue relatedx
-@import "../sass/inventory-builder.scss";
-@import "../sass/alert.scss";
+// Vue related
+@import "./inventory-builder.scss";
+@import "./likes.scss";
+@import "./alert.scss";

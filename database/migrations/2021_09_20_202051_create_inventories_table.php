@@ -19,7 +19,6 @@ class CreateInventoriesTable extends Migration
             $table->string('name');
             $table->longText('data')->nullable();
             $table->integer('likes')->default(0);
-            $table->integer('dislikes')->default(0);
             $table->timestamps();
 
             $table->foreign('user_id')

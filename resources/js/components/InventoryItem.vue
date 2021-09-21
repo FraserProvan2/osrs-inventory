@@ -1,8 +1,8 @@
 <template>
   <span
     class="grid-item"
-    :class="(this.item.id != -1) ? 'osrstooltip' : ''"
-    :id='this.item.id'
+    :class="this.item.id != -1 ? 'osrstooltip' : ''"
+    :id="this.item.id"
   >
     <img :src="getItemImgSrc(item)" alt="" />
     <div class="item-details">

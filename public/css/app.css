@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap);
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -12348,6 +12348,10 @@ input[type=color].form-control:disabled {
   vertical-align: text-bottom;
 }
 @charset "UTF-8";
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -22488,6 +22492,14 @@ span.input-group-text {
 .remove-additional i {
   font-size: 12px;
   text-align: center;
+}
+
+.likes-true {
+  color: #00bc8c;
+}
+
+.likes-false {
+  color: white;
 }
 
 .vue-notification {

@@ -5,7 +5,10 @@
     <div class="col-md-7">
         <div class="card mb-3">
             <div class="card-body">
-                <inventory-builder :setup="{{ $inventory->data }}" :edit="{{ json_encode($is_edit) }}" />
+                <inventory-builder 
+                    :setup="{{ $inventory->data }}" 
+                    :edit="{{ json_encode($is_edit) }}" 
+                />
             </div>
         </div>
     </div>
@@ -14,8 +17,11 @@
             <div class="card-header">
                 {{ $inventory->name }}
                 <span class="float-right">
-                    <i class="fa fa-thumbs-up"></i>
-                    <i class="fa fa-thumbs-down"></i>
+                    <likes 
+                        :likes="{{ $inventory->likes }}"
+                        :liked="{{ $liked }}"
+                        loggedIn="{{ Auth::check() }}"
+                    />
                 </span>
             </div>
             <div class="card-body">

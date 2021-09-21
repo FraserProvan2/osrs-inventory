@@ -48,6 +48,7 @@ class InventoryController extends Controller
     {
         return view('inventory.show', [
             'inventory' => Inventory::findOrFail($id),
+            'liked' => 0,
             'is_edit' => true
         ]);
     }

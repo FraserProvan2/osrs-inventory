@@ -29,6 +29,8 @@ Vue.use(Notifications)
 Vue.component('inventory-builder', require('./components/InventoryBuilder.vue').default);
 Vue.component('inventory-item', require('./components/InventoryItem.vue').default);
 
+Vue.component('likes', require('./components/Likes.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
