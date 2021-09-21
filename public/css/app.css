@@ -22422,6 +22422,11 @@ h3 {
   background-color: #303030;
 }
 
+span.input-group-text {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
 .grid-row {
   width: 100%;
   display: flex;
@@ -22433,7 +22438,7 @@ h3 {
   height: 36px;
   width: 45px;
   margin: 1px;
-  background-color: #444;
+  background-color: #3f454a;
   cursor: pointer;
 }
 .grid-item > img {
@@ -22444,7 +22449,7 @@ h3 {
 }
 
 .grid-item:hover {
-  background-color: #616060;
+  background-color: #596167;
 }
 
 .notes {

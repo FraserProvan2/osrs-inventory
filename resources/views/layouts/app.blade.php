@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://use.fontawesome.com/165a97784e.js"></script>
+    <script type="text/javascript" src="https://www.osrsbox.com/osrsbox-tooltips/osrsbox-tooltips.js" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,6 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://www.osrsbox.com/osrsbox-tooltips/osrsbox-tooltips.css">
 </head>
 <body>
     <div id="app">

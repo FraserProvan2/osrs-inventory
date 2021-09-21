@@ -1,9 +1,8 @@
 <template>
-  <div
+  <span
     class="grid-item"
-    data-toggle="tooltip"
-    data-placement="top"
-    :title="this.item.name"
+    :class="(this.item.id != -1) ? 'osrstooltip' : ''"
+    :id='this.item.id'
   >
     <img :src="getItemImgSrc(item)" alt="" />
     <div class="item-details">
@@ -16,7 +15,7 @@
         <div id="fuzzy" v-if="this.item.fuzzy">*</div>
       </div>
     </div>
-  </div>
+  </span>
 </template>
 
 <script>

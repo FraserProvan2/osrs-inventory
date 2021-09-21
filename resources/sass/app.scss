@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Bootstrap
 @import 'bootstrap/dist/css/bootstrap.css';
@@ -7,6 +7,8 @@
 @import "node_modules/bootswatch/dist/darkly/variables";
 @import '~bootstrap/scss/bootstrap';
 @import "node_modules/bootswatch/dist/darkly/bootswatch";
+@import "bootstrap-override.scss";
 
-@import '../sass/inventory-builder.scss';
-@import '../sass/alert.scss';
+// Vue relatedx
+@import "../sass/inventory-builder.scss";
+@import "../sass/alert.scss";

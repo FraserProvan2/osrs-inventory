@@ -2,10 +2,7 @@
   <div class="w-100">
     <!-- Controls -->
     <div class="d-flex mb-4">
-      <button
-        class="btn btn-primary mx-1 py-2 flex-fill"
-        @click="exportInvent"
-      >
+      <button class="btn btn-primary mx-1 py-2 flex-fill" @click="exportInvent">
         <i class="fa fa-copy fa-lg"></i>
       </button>
       <button class="btn btn-primary mx-1 py-2 w-25">
@@ -25,7 +22,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <!-- Equipment -->
         <div class="mb-3">
           <div class="text-center mb-2">
@@ -176,7 +173,7 @@
           </textarea>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <!-- Inventory -->
         <div class="mb-3">
           <h5 class="text-center">Inventory</h5>
