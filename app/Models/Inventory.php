@@ -16,4 +16,13 @@ class Inventory extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function gpCostString()
+    {
+        // TODO work out price
+        return [
+            'value' => '23',
+            'symbol' => 'M'
+        ];
+    }
 }
