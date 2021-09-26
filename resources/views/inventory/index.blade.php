@@ -24,7 +24,7 @@
                             <div class="d-flex">
                                 <div class="flex-grow-1">
                                     <a class="h5" href="/inventories/{{ $inventory->id }}">{{ $inventory->name }}</a>
-                                    <div class="small">by John</div>
+                                    <div class="small">by {{ $inventory->user->name }}</div>
                                 </div>
                                 <div class="align-items-end text-right">
                                     <div class="text-warning mt-1">200M <span>(gp)</span></div>
