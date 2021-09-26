@@ -12,9 +12,17 @@ class InventoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+       $inventories = Inventory::query();
+
+        if ($request->has('search')) {
+            $inventories->where('name','LIKE','%' . $request->get('search') . '%');
+        }
+
+        return view('inventory.index', [
+            'inventories' => $inventories->paginate(3),
+        ]);
     }
 
     /**
@@ -46,11 +54,11 @@ class InventoryController extends Controller
      */
     public function show($id)
     {
-        return view('inventory.show', [
-            'inventory' => Inventory::findOrFail($id),
-            'liked' => 0,
-            'is_edit' => true
-        ]);
+            return view('inventory.show', [
+                'inventory' => Inventory::findOrFail($id),
+                'liked' => 0,
+                'is_edit' => true
+            ]);
     }
 
     /**

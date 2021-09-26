@@ -22509,3 +22509,12 @@ span.input-group-text {
 .vue-notification-group {
   margin-top: 40px !important;
 }
+
+.setup {
+  background-color: #444;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4.5px;
+  line-height: 1.4;
+  margin-bottom: 7px;
+}

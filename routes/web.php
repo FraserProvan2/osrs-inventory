@@ -20,5 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
-Route::get('/inventory/{id}', [App\Http\Controllers\InventoryController::class, 'show'])->name('show');
+
+Route::get('/inventories', [App\Http\Controllers\InventoryController::class, 'index'])->name('inventories');
+Route::post('/inventories', [App\Http\Controllers\InventoryController::class, 'index']);
+Route::get('/inventories/{id}', [App\Http\Controllers\InventoryController::class, 'show'])->name('show');
