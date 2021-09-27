@@ -17,6 +17,28 @@ class Inventory extends Model
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * Decrease likes amount
+     * 
+     * @return null
+     */
+    public function decreaseLikes()
+    {
+        $this->likes = $this->likes - 1;
+        $this->save();
+    }
+
+    /**
+     * Increase likes amount
+     * 
+     * @return null
+     */
+    public function increaseLikes()
+    {
+        $this->likes = $this->likes + 1;
+        $this->save();
+    }
+
     public function gpCostString()
     {
         // TODO work out price

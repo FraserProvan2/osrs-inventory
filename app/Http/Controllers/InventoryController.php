@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inventory;
+use App\Models\Like;
 use Illuminate\Http\Request;
 
 class InventoryController extends Controller
@@ -54,11 +55,17 @@ class InventoryController extends Controller
      */
     public function show($id)
     {
-            return view('inventory.show', [
-                'inventory' => Inventory::findOrFail($id),
-                'liked' => 0,
-                'is_edit' => true
-            ]);
+        $liked = 0;
+        $check = Like::where('inventory_id', $id)
+            ->where('user_id', auth()->id())
+            ->first();
+        if ($check) $liked = 1;
+
+        return view('inventory.show', [
+            'inventory' => Inventory::findOrFail($id),
+            'liked' => $liked,
+            'is_edit' => true
+        ]);
     }
 
     /**

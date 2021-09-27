@@ -32,17 +32,19 @@
                                 <div class="align-items-end text-right">
                                     <div class=" mt-1">
                                         <span class="d-flex justify-content-end">
-                                            {{ $inventory->gpCostString()['value'] }}
                                             @if($inventory->gpCostString()['symbol'] == 'M')
-                                                <span class="text-success">M</span>
+                                                <span class="text-success">
+                                                    {{ $inventory->gpCostString()['value'] . $inventory->gpCostString()['symbol'] }}
+                                                </span>
                                             @else
-                                                <span>{{ $inventory->gpCostString()['symbol'] }}</span>
+                                                <span>
+                                                    {{ $inventory->gpCostString()['value'] . $inventory->gpCostString()['symbol'] }}
+                                                </span>
                                             @endif
-
                                             <span class="text-muted small">&nbsp;gp</span>
                                         </span>
                                     </div>
-                                    <div class="small text-info">Posted 3 weeks ago</div>
+                                    <div class="small"><i class="fa fa-thumbs-up"></i> {{ $inventory->likes }}</div>
                                 </div>
                             </div>
                         </div>

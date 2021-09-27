@@ -19,3 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/item/{item_id}', [App\Http\Controllers\OldSchoolItemController::class, 'getItemIconSrc']);
+
+Route::get('/likes/{inventory_id}', [App\Http\Controllers\LikeController::class, 'action'])->middleware('auth');

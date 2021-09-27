@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  props: ["loggedin", "likes", "liked"],
+  props: ["id", "loggedin", "likes", "liked"],
   data() {
     return {
       likedUI: false,
@@ -17,29 +17,21 @@ export default {
   },
   methods: {
     action() {
-      if (!this.loggedin) {
-        return this.fireAlert(
-          "error",
-          "Error",
-          "You must be logged in to like."
-        );
-      }
-
-      if (this.likedUI) {
-        console.log("unliked");
-        this.fireAlert("success", "Success", "Inventory unliked.");
-        // TODO
-
-        this.likedUI = false;
-        this.likesUI = this.likesUI - 1;
-      } else {
-        console.log("liked");
-        this.fireAlert("success", "Success", "Inventory liked.");
-        // TODO
-
-        this.likedUI = true;
-        this.likesUI = this.likesUI + 1;
-      }
+      axios.get('/api/likes/' + this.id)
+        .then(res => {
+          if (res.data.action == 'liked') {
+            this.fireAlert("success", "Success", "Inventory liked.");
+             this.likesUI = this.likesUI + 1;
+            this.likedUI = true;
+          } else if (res.data.action == 'unliked') {
+            this.likedUI = false;
+             this.likesUI = this.likesUI - 1;
+            this.fireAlert("success", "Success", "Inventory unliked.");
+          }
+        })
+        .catch(() => {
+          this.fireAlert("error", "Error", "You must be signed in to like.");
+        });
     },
     fireAlert(type, title, text) {
       this.$notify({ group: "all", title, type, text, duration: 2500 });
@@ -52,8 +44,8 @@ export default {
     },
   },
   mounted() {
-    this.likedUI = this.liked;
     this.likesUI = this.likes;
+    this.likedUI = this.liked;
   },
 };
 </script>

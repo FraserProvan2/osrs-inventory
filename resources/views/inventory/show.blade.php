@@ -18,6 +18,7 @@
                 {{ $inventory->name }}
                 <span class="float-right">
                     <likes 
+                        :id="{{ $inventory->id }}"
                         :likes="{{ $inventory->likes }}"
                         :liked="{{ $liked }}"
                         loggedIn="{{ Auth::check() }}"
