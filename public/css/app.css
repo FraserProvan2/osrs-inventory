@@ -22494,11 +22494,11 @@ span.input-group-text {
   text-align: center;
 }
 
-.likes-true {
+.likes-true, .likes-true:hover {
   color: #00bc8c;
 }
 
-.likes-false {
+.likes-false, .likes-false:hover {
   color: white;
 }
 

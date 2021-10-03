@@ -26,6 +26,7 @@
     <div id="app">
         <main class="container py-4">
             @include('layouts.nav')
+            @include('layouts.alert')
             @yield('content')
             @include('layouts.footer')
 

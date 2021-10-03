@@ -26,3 +26,4 @@ Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->na
 Route::get('/inventories', [App\Http\Controllers\InventoryController::class, 'index'])->name('inventories');
 Route::post('/inventories', [App\Http\Controllers\InventoryController::class, 'index']);
 Route::get('/inventories/{id}', [App\Http\Controllers\InventoryController::class, 'show'])->name('show');
+Route::post('/inventories/store', [App\Http\Controllers\InventoryController::class, 'store']);

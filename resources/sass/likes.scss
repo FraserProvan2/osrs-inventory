@@ -1,10 +1,9 @@
 @import './variables';
 
-.likes-true {
+.likes-true, .likes-true:hover {
     color: $success;
 }
 
-.likes-false {
+.likes-false, .likes-false:hover  {
     color: white;
 }
-

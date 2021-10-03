@@ -9,6 +9,8 @@ class Inventory extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['id', 'user_id', 'name', 'data'];
+
     /**
      * Get the user that owns the phone.
      */

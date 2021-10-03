@@ -1,69 +1,122 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row justify-content-center">
-    <div class="col-md-7 mb-2">
-        <div class="card">
-            <div class="card-body">
-                <h5>Inventories</h5>
-                <form method="POST" action="{{ url('/inventories') }}">
-                    @csrf
-            
-                    <div class="d-flex">
-                        <div class="form-group">
-                            <input type="text" name="search" class="form-control form-control" placeholder="Zulrah mid" />
-                        </div>
-                        <div>
-                            <button class="btn btn-success px-3 ml-1 text-small">Search</button>
-                        </div>
-                    </div>
-                </form>
+        
+    <div class="row justify-content-center">
+        <div class="col-md-7 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Inventories</h5>
+                    <form method="POST" action="{{ url('/inventories/store') }}">
+                        @csrf
 
-                @if(count($inventories))
-                    @foreach ($inventories as $inventory)
-                        <div class="setup">
-                            <div class="d-flex">
-                                <div class="flex-grow-1">
-                                    <a class="h5" href="{{ url('/inventories/' . $inventory->id) }}">{{ $inventory->name }}</a>
-                                    <div>
-                                        <a class="small text-white" href="{{ url('/user/' . $inventory->user->id) }}">by {{ $inventory->user->name }}</a>
-                                    </div>
+                        <div class="d-flex">
+                            <div class="form-group">
+                                <input type="text" name="search" class="form-control form-control"
+                                    placeholder="Zulrah mid" />
+                            </div>
+                            <div>
+                                <button class="btn btn-success px-3 ml-1 text-small">Search</button>
+                            </div>
+                            @if(Auth::user())
+                                <div class="form-group d-flex justify-content-end w-100">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#createModal">
+                                        Create New
+                                    </button>
                                 </div>
-                                <div class="align-items-end text-right">
-                                    <div class=" mt-1">
-                                        <span class="d-flex justify-content-end">
-                                            @if($inventory->gpCostString()['symbol'] == 'M')
-                                                <span class="text-success">
-                                                    {{ $inventory->gpCostString()['value'] . $inventory->gpCostString()['symbol'] }}
-                                                </span>
-                                            @else
-                                                <span>
-                                                    {{ $inventory->gpCostString()['value'] . $inventory->gpCostString()['symbol'] }}
-                                                </span>
-                                            @endif
-                                            <span class="text-muted small">&nbsp;gp</span>
-                                        </span>
+                            @endif
+                        </div>
+                    </form>
+
+                    @if (count($inventories))
+                        @foreach ($inventories as $inventory)
+                            <div class="setup">
+                                <div class="d-flex">
+                                    <div class="flex-grow-1">
+                                        <a class="h5"
+                                            href="{{ url('/inventories/' . $inventory->id) }}">{{ $inventory->name }}</a>
+                                        <div>
+                                            <a class="small text-white"
+                                                href="{{ url('/user/' . $inventory->user->id) }}">by
+                                                {{ $inventory->user->name }}</a>
+                                        </div>
                                     </div>
-                                    <div class="small"><i class="fa fa-thumbs-up"></i> {{ $inventory->likes }}</div>
+                                    <div class="align-items-end text-right">
+                                        <div class=" mt-1">
+                                            <span class="d-flex justify-content-end">
+                                                @if ($inventory->gpCostString()['symbol'] == 'M')
+                                                    <span class="text-success">
+                                                        {{ $inventory->gpCostString()['value'] . $inventory->gpCostString()['symbol'] }}
+                                                    </span>
+                                                @else
+                                                    <span>
+                                                        {{ $inventory->gpCostString()['value'] . $inventory->gpCostString()['symbol'] }}
+                                                    </span>
+                                                @endif
+                                                <span class="text-muted small">&nbsp;gp</span>
+                                            </span>
+                                        </div>
+                                        <div class="small"><i class="fa fa-thumbs-up"></i> {{ $inventory->likes }}</div>
+                                    </div>
                                 </div>
                             </div>
+                        @endforeach
+                    @else
+                        <div class="text-danger">No inventories found</div>
+                    @endif
+
+                    {{ $inventories->links('inventory.includes.pagination') }}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Trending</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Modal -->
+    @if(Auth::user())
+        <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createModalLabel">Create (Import)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form method="post" action="{{ url('inventories/store') }}">
+                        <div class="modal-body">
+
+                            <!-- CROSS Site Request Forgery Protection -->
+                            @csrf
+
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Import (JSON)<small class="text-muted"> Optional</small></label>
+                                <textarea class="form-control" name="json" id="message" rows="4"
+                                    placeholder="JSON paste"></textarea>
+                            </div>
                         </div>
-                    @endforeach
-                @else
-                    <div class="text-danger">No inventories found</div>
-                @endif
-
-                {{ $inventories->links('inventory.includes.pagination') }}
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-success" value="Create" />
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    @endif
 
-    <div class="col-md-5 mb-2">
-        <div class="card">
-            <div class="card-body">
-                <h5>Trending</h5>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection

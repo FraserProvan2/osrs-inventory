@@ -1,7 +1,8 @@
 <template>
   <div>
-    <button class="btn py-0 px-2" :class="this.btnClass" @click="action">
-      <i class="fa fa-thumbs-up"></i> {{ this.likesUI }}
+    <button class="btn py-0 px-1" :class="this.btnClass" @click="action">
+      <i class="fa fa-lg fa-thumbs-up"></i> 
+      <span>{{ this.likesUI }}</span>
     </button>
   </div>
 </template>

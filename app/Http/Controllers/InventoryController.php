@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Inventory;
 use App\Models\Like;
+use App\Services\InventoryService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class InventoryController extends Controller
 {
@@ -27,16 +29,6 @@ class InventoryController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -44,7 +36,22 @@ class InventoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['name' => 'required']);
+        if(isset($request->json) && !InventoryService::validJsonImport($request->json)) {
+            return back()->withErrors(['json' => 'JSON is not valid']);
+        }
+
+        Inventory::create([
+            'name' => $request->name,
+            'user_id' => auth()->id(),
+            'data' => InventoryService::mergedImportedOrNew($request->json)
+        ]);
+
+        // TODO: store
+
+        // TODO: redirect to new inventory via url (in edit mode)
+
+        return Redirect('inventories'); // temp
     }
 
     /**
