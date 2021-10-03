@@ -3,11 +3,11 @@
 @section('content')
         
     <div class="row justify-content-center">
-        <div class="col-md-7 mb-2">
+        <div class="col-md-12 mb-2">
             <div class="card">
                 <div class="card-body">
                     <h5>Inventories</h5>
-                    <form method="POST" action="{{ url('/inventories/store') }}">
+                    <form method="POST" action="{{ url('/inventories') }}">
                         @csrf
 
                         <div class="d-flex">
@@ -30,9 +30,10 @@
                     </form>
 
                     @if (count($inventories))
+                    <div class="row">
                         @foreach ($inventories as $inventory)
-                            <div class="setup">
-                                <div class="d-flex">
+                            <div class="col-md-6">
+                                <div class="setup d-flex">
                                     <div class="flex-grow-1">
                                         <a class="h5"
                                             href="{{ url('/inventories/' . $inventory->id) }}">{{ $inventory->name }}</a>
@@ -62,19 +63,13 @@
                                 </div>
                             </div>
                         @endforeach
+                    </div>
+            
                     @else
                         <div class="text-danger">No inventories found</div>
                     @endif
 
                     {{ $inventories->links('inventory.includes.pagination') }}
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-5 mb-2">
-            <div class="card">
-                <div class="card-body">
-                    <h5>Trending</h5>
                 </div>
             </div>
         </div>
