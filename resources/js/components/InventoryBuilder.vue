@@ -5,15 +5,19 @@
       <button class="btn btn-primary mx-1 py-2 flex-fill" @click="exportInvent">
         <i class="fa fa-copy fa-lg"></i>
       </button>
-      <button class="btn btn-primary mx-1 py-2 w-25" @click="share">
-        <i class="fa fa-share-alt fa-lg"></i>
-      </button>
       <button
         class="btn btn-success mx-1 py-2 w-25"
         v-if="this.edit"
         @click="save"
       >
         <i class="fa fa-save fa-lg"></i>
+      </button>
+      <button
+        class="btn btn-danger mx-1 py-2 w-25"
+        v-if="this.edit"
+        @click="destroy"
+      >
+        <i class="fa fa-trash fa-lg"></i>
       </button>
     </div>
 
@@ -450,7 +454,7 @@ import Inventory from "../entities/Inventory";
 import Utils from "../Utils";
 
 export default {
-  props: ["setup", "edit"],
+  props: ["id", "setup", "edit"],
   data() {
     return {
       invent: new Inventory(),
@@ -555,8 +559,30 @@ export default {
       this.$forceUpdate();
     },
     save() {
-      // TODO
-      console.log('save');
+      axios
+        .post(`/inventories/${this.id}/update`, this.invent)
+        .then(() => {
+          this.unsaved = false;
+          this.fireAlert("success", "Success", "Inventory Saved.");
+        })
+        .catch(() => {
+          this.fireAlert("error", "Error", "Something went wrong.");
+        });
+    },
+    destroy() {
+      axios
+        .get(`/inventories/${this.id}/destroy`, this.invent)
+        .then((res) => {
+          console.log(res);
+          this.fireAlert("success", "Success", "Inventory Deleted. Redirecting in...");
+
+          window.setTimeout(function () {
+            window.location.href = "/inventories";
+          }, 2000);
+        })
+        .catch(() => {
+          this.fireAlert("error", "Error", "Something went wrong.");
+        });
     },
     getModalTitle() {
       if (this.editingItemKey == "additional") return "Add additional item";
@@ -595,14 +621,8 @@ export default {
       console.log(inventJson);
       this.fireAlert("success", "Success", "Copied to clipboard.");
     },
-    share() {
-      // TODO
-      console.log('share');
-    },
     fireAlert(type, title, text) {
-      if (this.edit) {
-        this.$notify({ group: "all", title, type, text, duration: 2500 });
-      }
+      this.$notify({ group: "all", title, type, text, duration: 2500 });
     },
   },
   mounted() {

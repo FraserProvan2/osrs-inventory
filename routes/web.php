@@ -27,3 +27,5 @@ Route::get('/inventories', [App\Http\Controllers\InventoryController::class, 'in
 Route::post('/inventories', [App\Http\Controllers\InventoryController::class, 'index']);
 Route::get('/inventories/{id}', [App\Http\Controllers\InventoryController::class, 'show'])->name('show');
 Route::post('/inventories/store', [App\Http\Controllers\InventoryController::class, 'store']);
+Route::post('/inventories/{id}/update', [App\Http\Controllers\InventoryController::class, 'update']);
+Route::get('/inventories/{id}/destroy', [App\Http\Controllers\InventoryController::class, 'destroy']);

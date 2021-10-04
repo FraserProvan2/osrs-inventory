@@ -6,6 +6,7 @@ use App\Models\Inventory;
 use App\Models\Like;
 use App\Services\InventoryService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 class InventoryController extends Controller
@@ -41,17 +42,13 @@ class InventoryController extends Controller
             return back()->withErrors(['json' => 'JSON is not valid']);
         }
 
-        Inventory::create([
+        $inventory = Inventory::create([
             'name' => $request->name,
             'user_id' => auth()->id(),
             'data' => InventoryService::mergedImportedOrNew($request->json)
         ]);
 
-        // TODO: store
-
-        // TODO: redirect to new inventory via url (in edit mode)
-
-        return Redirect('inventories'); // temp
+        return Redirect('inventories/' . $inventory->id);
     }
 
     /**
@@ -62,16 +59,12 @@ class InventoryController extends Controller
      */
     public function show($id)
     {
-        $liked = 0;
-        $check = Like::where('inventory_id', $id)
-            ->where('user_id', auth()->id())
-            ->first();
-        if ($check) $liked = 1;
+        $inventory = Inventory::findOrFail($id);
 
         return view('inventory.show', [
-            'inventory' => Inventory::findOrFail($id),
-            'liked' => $liked,
-            'is_edit' => true
+            'inventory' => $inventory,
+            'liked' => (Like::userHasLiked($id) ? 1 : 0),
+            'is_edit' => (Auth::user()->id == $inventory->user_id)
         ]);
     }
 
@@ -91,21 +84,38 @@ class InventoryController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Json\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $inventory = Inventory::findOrFail($id);
+
+        if ($inventory->user_id != Auth::user()->id) {
+            return response()->json('Unauthorized.', 400);
+        }
+
+        $inventory->data = $request->all();
+        $inventory->save();
+
+        return response()->json([]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Json\Response
      */
     public function destroy($id)
     {
-        //
+        $inventory = Inventory::findOrFail($id);
+
+        if ($inventory->user_id != Auth::user()->id) {
+            return response()->json('Unauthorized.', 400);
+        }
+
+        $inventory->delete();
+
+        return response()->json([]);
     }
 }

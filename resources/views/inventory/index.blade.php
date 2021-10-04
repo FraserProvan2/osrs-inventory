@@ -11,7 +11,7 @@
                         @csrf
 
                         <div class="d-flex">
-                            <div class="form-group">
+                            <div class="form-group mr-1">
                                 <input type="text" name="search" class="form-control form-control"
                                     placeholder="Zulrah mid" />
                             </div>
@@ -20,7 +20,7 @@
                             </div>
                             @if(Auth::user())
                                 <div class="form-group d-flex justify-content-end w-100">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
                                         data-target="#createModal">
                                         Create New
                                     </button>

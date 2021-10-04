@@ -19,6 +19,7 @@
                     </div>
                 </div>
                 <inventory-builder 
+                    :id="{{ $inventory->id }}"
                     :setup="{{ $inventory->data }}" 
                     :edit="{{ json_encode($is_edit) }}" 
                 />

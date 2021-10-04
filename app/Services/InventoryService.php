@@ -37,10 +37,16 @@ class InventoryService
         if ($json == null) {
             return $fresh_inventory;
         }
+        
+        $import = json_decode($json, true);
+        $inventory = json_decode($fresh_inventory, true);
 
-        // TODO: merge
-        dump($json);
-        dd($fresh_inventory);
+        // Merging import onto fresh 
+        foreach($inventory as $section => $contents) {
+            if (isset($import[$section])) {
+                $inventory[$section] = $import[$section];
+            }
+        }
 
         return $json;
     }
