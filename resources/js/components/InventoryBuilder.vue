@@ -570,18 +570,24 @@ export default {
         });
     },
     destroy() {
-      axios
-        .get(`/inventories/${this.id}/destroy`, this.invent)
-        .then((res) => {
-          this.fireAlert("success", "Success", "Inventory Deleted. Redirecting in...");
+      if (confirm("Are you sure you want to delete this inventory?")) {
+        axios
+          .get(`/inventories/${this.id}/destroy`, this.invent)
+          .then(() => {
+            this.fireAlert(
+              "success",
+              "Success",
+              "Inventory Deleted. Redirecting..."
+            );
 
-          window.setTimeout(function () {
-            window.location.href = "/inventories";
-          }, 2000);
-        })
-        .catch(() => {
-          this.fireAlert("error", "Error", "Something went wrong.");
-        });
+            window.setTimeout(function () {
+              window.location.href = "/inventories";
+            }, 2000);
+          })
+          .catch(() => {
+            this.fireAlert("error", "Error", "Something went wrong.");
+          });
+      }
     },
     getModalTitle() {
       if (this.editingItemKey == "additional") return "Add additional item";

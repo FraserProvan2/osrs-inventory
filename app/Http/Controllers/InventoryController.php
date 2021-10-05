@@ -7,7 +7,6 @@ use App\Models\Like;
 use App\Services\InventoryService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
 
 class InventoryController extends Controller
 {
@@ -99,7 +98,7 @@ class InventoryController extends Controller
     public function updateName(Request $request, $id)
     {
         $request->validate(['name' => 'required']);
-        
+
         $inventory = Inventory::findOrFail($id);
         if ($inventory->user_id != Auth::user()->id) {
             return response()->json('Unauthorized.', 400);
