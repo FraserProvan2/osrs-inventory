@@ -10,20 +10,23 @@
                     <form method="POST" action="{{ url('/inventories') }}">
                         @csrf
 
-                        <div class="d-flex">
-                            <div class="form-group mr-1">
-                                <input type="text" name="search" class="form-control form-control"
-                                    placeholder="Zulrah mid" />
-                            </div>
-                            <div>
-                                <button class="btn btn-success px-3 ml-1 text-small">Search</button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" name="search" placeholder="Zulrah">
+                                    <div class="input-group-append">
+                                      <input class="btn btn-success px-3" type="submit" value="Search" />
+                                    </div>
+                                </div>
                             </div>
                             @if(Auth::user())
-                                <div class="form-group d-flex justify-content-end w-100">
-                                    <button type="button" class="btn btn-success" data-toggle="modal"
-                                        data-target="#createModal">
-                                        Create New
-                                    </button>
+                                <div class="col-md-6">               
+                                    <div class="form-group d-flex justify-content-end w-100">
+                                        <button type="button" class="btn btn-success px-3" data-toggle="modal"
+                                            data-target="#createModal">
+                                            Create New
+                                        </button>
+                                    </div>
                                 </div>
                             @endif
                         </div>

@@ -26,10 +26,11 @@ Vue.use(Notifications)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+// Show
 Vue.component('inventory-builder', require('./components/InventoryBuilder.vue').default);
 Vue.component('inventory-item', require('./components/InventoryItem.vue').default);
-
 Vue.component('likes', require('./components/Likes.vue').default);
+Vue.component('name', require('./components/Name.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

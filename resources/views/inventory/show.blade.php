@@ -7,15 +7,19 @@
             <div class="card-body">
                 <div class="d-flex w-100 p-1">
                     <div class="d-flex flex-grow-1">
-                        <h4>{{ $inventory->name }}</h4>
+                        <name 
+                            :id="{{ $inventory->id }}" 
+                            name="{{ $inventory->name }}"
+                            :edit="{{ json_encode($is_edit) }}"
+                        />
                     </div>
                     <div>
                         <likes 
-                        :id="{{ $inventory->id }}"
-                        :likes="{{ $inventory->likes }}"
-                        :liked="{{ $liked }}"
-                        loggedIn="{{ Auth::check() }}"
-                    />
+                            :id="{{ $inventory->id }}"
+                            :likes="{{ $inventory->likes }}"
+                            :liked="{{ $liked }}"
+                            loggedIn="{{ Auth::check() }}"
+                        />
                     </div>
                 </div>
                 <inventory-builder 

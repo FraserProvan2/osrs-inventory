@@ -573,7 +573,6 @@ export default {
       axios
         .get(`/inventories/${this.id}/destroy`, this.invent)
         .then((res) => {
-          console.log(res);
           this.fireAlert("success", "Success", "Inventory Deleted. Redirecting in...");
 
           window.setTimeout(function () {

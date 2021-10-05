@@ -69,17 +69,6 @@ class InventoryController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -95,6 +84,28 @@ class InventoryController extends Controller
         }
 
         $inventory->data = $request->all();
+        $inventory->save();
+
+        return response()->json([]);
+    }
+
+    /**
+     * Updates the name
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Json\Response
+     */
+    public function updateName(Request $request, $id)
+    {
+        $request->validate(['name' => 'required']);
+        
+        $inventory = Inventory::findOrFail($id);
+        if ($inventory->user_id != Auth::user()->id) {
+            return response()->json('Unauthorized.', 400);
+        }
+
+        $inventory->name = $request->get('name');
         $inventory->save();
 
         return response()->json([]);
