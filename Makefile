@@ -11,7 +11,13 @@ share:
 build:
 	./vendor/bin/sail build --no-cache
 
+watch:
+	npm run watch
+
 clear_cache:
 	php artisan route:clear
 	php artisan config:clear
 	php artisan view:clear
+
+test:
+	php artisan test

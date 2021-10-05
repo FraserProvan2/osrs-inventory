@@ -23,6 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
 
+// TODO add middleware auth
 Route::get('/inventories', [App\Http\Controllers\InventoryController::class, 'index'])->name('inventories');
 Route::post('/inventories', [App\Http\Controllers\InventoryController::class, 'index']);
 Route::get('/inventories/{id}', [App\Http\Controllers\InventoryController::class, 'show'])->name('show');
