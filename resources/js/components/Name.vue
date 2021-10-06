@@ -7,7 +7,7 @@
       @blur="action()"
     />
     <h4 v-else>
-      {{ this.name }}
+      {{ this.nameUI }}
     </h4>
     <span v-if="this.edit">
       <button
