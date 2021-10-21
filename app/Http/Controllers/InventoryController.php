@@ -59,11 +59,15 @@ class InventoryController extends Controller
     public function show($id)
     {
         $inventory = Inventory::findOrFail($id);
+        $is_author = false;
+        if (Auth::user() && Auth::user()->id == $inventory->user_id) {
+            $is_author = true;
+        }
 
         return view('inventory.show', [
             'inventory' => $inventory,
             'liked' => (Like::userHasLiked($id) ? 1 : 0),
-            'is_edit' => (Auth::user()->id == $inventory->user_id)
+            'is_edit' => $is_author
         ]);
     }
 
