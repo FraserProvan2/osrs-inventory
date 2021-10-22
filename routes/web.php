@@ -36,3 +36,5 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/likes/{inventory_id}', [App\Http\Controllers\LikeController::class, 'action']);
 });
+
+Route::get('/users/{url}', [App\Http\Controllers\UserController::class, 'show']);

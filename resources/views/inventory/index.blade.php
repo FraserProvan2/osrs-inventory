@@ -42,7 +42,7 @@
                                             href="{{ url('/inventories/' . $inventory->id) }}">{{ $inventory->name }}</a>
                                         <div>
                                             <a class="small text-white"
-                                                href="{{ url('/user/' . $inventory->user->id) }}">by
+                                                href="{{ url('/users/' . $inventory->user->url) }}">by
                                                 {{ $inventory->user->name }}</a>
                                         </div>
                                     </div>

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="row justify-content-center">
     <div class="col-md-7">
         <div class="card mb-3">
@@ -32,18 +33,28 @@
     </div>
     <div class="col-md-5">
         <div class="card mb-3">
-            <div class="card-header">
-                profile widget here
-            </div>
-            <div class="card-body">
-                <small>by ssj krun date etc</small>
+            <div class="card-header">Posted By</div>
+            <div class="p-3">
+                <a href="{{ url('users/' . $inventory->user->url) }}">
+                    <h5 class="text-center">{{ $inventory->user->name }}</h5>
+                </a>
+                <div class="d-flex justify-content-center">
+                    <small class="px-1">
+                        <span class="text-muted">Inventories: </span>
+                        <span>{{ $inventory->user->totalInventories }}</span>
+                    </small>
+                    <small class="px-1">
+                        <span class="text-muted">Total Likes: </span>
+                        <span>{{ $inventory->user->totalLikes }}</span>
+                    </small>
+                </div>
             </div>
         </div>
 
         <div class="card">
             <div class="card-header">Comments</div>
             <div class="card-body">
-                
+                e
             </div>
         </div>
     </div>

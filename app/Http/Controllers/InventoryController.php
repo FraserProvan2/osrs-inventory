@@ -60,6 +60,7 @@ class InventoryController extends Controller
     {
         $inventory = Inventory::findOrFail($id);
         $is_author = false;
+
         if (Auth::user() && Auth::user()->id == $inventory->user_id) {
             $is_author = true;
         }
