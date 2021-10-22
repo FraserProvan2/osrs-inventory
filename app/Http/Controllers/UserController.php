@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inventory;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -16,7 +18,9 @@ class UserController extends Controller
     public function show($url)
     {
         return view('user.show', [
-            'user' => User::where('url', $url)->firstOrFail()
+            'user' => $user = User::where('url', $url)->firstOrFail(),
+            'inventories' => Inventory::where('user_id', $user->id)->paginate(7),
+            'likes' => $user->getLikedInventories()
         ]);
     }
 }

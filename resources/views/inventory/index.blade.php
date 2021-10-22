@@ -35,10 +35,10 @@
                     @if (count($inventories))
                     <div class="row">
                         @foreach ($inventories as $inventory)
-                            <div class="col-md-6">
-                                <div class="setup d-flex">
+                            <div class="col-md-6 mb-1">
+                                <div class="setup d-flex h-100">
                                     <div class="flex-grow-1">
-                                        <a class="h5"
+                                        <a class="h6"
                                             href="{{ url('/inventories/' . $inventory->id) }}">{{ $inventory->name }}</a>
                                         <div>
                                             <a class="small text-white"
@@ -46,8 +46,8 @@
                                                 {{ $inventory->user->name }}</a>
                                         </div>
                                     </div>
-                                    <div class="align-items-end text-right">
-                                        <div class=" mt-1">
+                                    <div class="align-items-end m-auto text-right w-25">
+                                        {{-- <div class="mt-1">
                                             <span class="d-flex justify-content-end">
                                                 @if ($inventory->gpCostString()['symbol'] == 'M')
                                                     <span class="text-success">
@@ -60,8 +60,8 @@
                                                 @endif
                                                 <span class="text-muted small">&nbsp;gp</span>
                                             </span>
-                                        </div>
-                                        <div class="small"><i class="fa fa-thumbs-up"></i> {{ $inventory->likes }}</div>
+                                        </div> --}}
+                                        <div class="text-muted"><i class="fa fa fa-thumbs-up"></i> {{ $inventory->likes }}</div>
                                     </div>
                                 </div>
                             </div>

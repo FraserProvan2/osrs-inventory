@@ -24,7 +24,7 @@ class InventoryController extends Controller
         }
 
         return view('inventory.index', [
-            'inventories' => $inventories->paginate(3),
+            'inventories' => $inventories->paginate(12),
         ]);
     }
 

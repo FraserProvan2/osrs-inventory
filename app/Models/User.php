@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
@@ -60,6 +61,22 @@ class User extends Authenticatable
     }
 
     /**
+     * Get the inventories for the user
+     */
+    public function inventories()
+    {
+        return $this->hasMany(Inventory::class);
+    }
+
+    /**
+     * Get the likes for the user
+     */
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+
+    /**
      * Calculate total likes
      */
     public function getTotalLikesAttribute()
@@ -81,10 +98,15 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the inventories for the user
+     * Get liked inventories
      */
-    public function inventories()
+    public function getLikedInventories()
     {
-        return $this->hasMany(Inventory::class);
+        $inventories = new Collection();
+        foreach($this->likes->pluck('inventory_id') as $id) {
+            $inventories[] = Inventory::where('id', $id)->first();
+        }
+
+        return $inventories;
     }
 }

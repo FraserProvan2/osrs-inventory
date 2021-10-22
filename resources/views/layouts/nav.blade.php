@@ -14,7 +14,6 @@
                     <a class="nav-link {{ (Request::path() == ('users/' . Auth::user()->url)) ? 'active' : '' }}" href="{{ url('users/' . Auth::user()->url) }}">{{ __('My Profile') }}</a>  
                 @endauth
                 <a class="nav-link {{ Route::currentRouteNamed('inventories') ? 'active' : '' }}" href="{{ route('inventories') }}">{{ __('Inventories') }}</a>
-                <a class="nav-link {{ Route::currentRouteNamed('about') ? 'active' : '' }}" href="{{ route('about') }}">{{ __('About') }}</a>
             </ul>
 
             <!-- Right Side Of Navbar -->
