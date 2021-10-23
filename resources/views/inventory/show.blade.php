@@ -56,7 +56,7 @@
             <div>
                 @comments([
                     'model' => $inventory,
-                    'perPage' => 1
+                    'perPage' => 5
                 ])
             </div>
         </div>
