@@ -13,7 +13,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-md-6 mb-2">
+        <div class="col-md-6 mb-3">
             <div class="card h-100">
                 <div class="card-header">About</div>
                 <div class="card-body">
@@ -24,7 +24,7 @@
             </div>
         </div>
     
-        <div class="col-md-6 mb-2">
+        <div class="col-md-6 mb-3">
             <div class="card h-100">
                 <div class="card-header">Importing/Exporting</div>
                 <div class="card-body">

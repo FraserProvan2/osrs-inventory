@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card mb-3">
                 <div class="card-header">Posted Inventories</div>
                 <div class="card-body p-3 mt-1">
                     @if (count($inventories))
@@ -46,7 +46,7 @@
                     </div>
             
                     @else
-                        <div class="text-danger text-center p-2">No inventories posted</div>
+                        <div class="text-muted text-center p-2"><i class="fa fa-exclamation" aria-hidden="true"></i> You have no intenvories</div>
                     @endif
 
                     {{ $inventories->links('inventory.includes.pagination') }}
@@ -71,7 +71,7 @@
                             @endforeach
                         </ul>
                     @else
-                        <div class="text-danger text-center p-2">Nothing liked yet...</div>
+                        <div class="text-muted text-center p-2"><i class="fa fa-exclamation" aria-hidden="true"></i> You have no likes</div>
                     @endif
                 </div>
             </div>
