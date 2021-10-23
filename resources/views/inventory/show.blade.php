@@ -53,8 +53,11 @@
 
         <div class="card mb-3">
             <div class="card-header">Comments</div>
-            <div class="card-body">
-                e
+            <div>
+                @comments([
+                    'model' => $inventory,
+                    'perPage' => 1
+                ])
             </div>
         </div>
     </div>

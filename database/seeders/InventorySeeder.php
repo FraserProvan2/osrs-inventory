@@ -38,5 +38,7 @@ class InventorySeeder extends Seeder
             'data' => file_get_contents('./resources/seed-data/treerun.json'),
             'likes' => 1,
         ]);
+
+        
     }
 }

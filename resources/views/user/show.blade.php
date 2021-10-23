@@ -46,10 +46,13 @@
                     </div>
             
                     @else
-                        <div class="text-muted text-center p-2"><i class="fa fa-exclamation" aria-hidden="true"></i> You have no intenvories</div>
+                        <div class="text-muted text-center p-2">
+                            <i class="fa fa-exclamation" aria-hidden="true"></i>
+                             User has no intenvories
+                        </div>
                     @endif
 
-                    {{ $inventories->links('inventory.includes.pagination') }}
+                    {{ $inventories->onEachSide(0)->links('inventory.includes.pagination') }}
                 </div>
             </div>
         </div>
@@ -74,7 +77,7 @@
                             @endforeach
                         </ul>
                     @else
-                        <div class="text-muted text-center p-2"><i class="fa fa-exclamation" aria-hidden="true"></i> You have no likes</div>
+                        <div class="text-muted text-center p-2"><i class="fa fa-exclamation" aria-hidden="true"></i> User has no likes</div>
                     @endif
                 </div>
             </div>
