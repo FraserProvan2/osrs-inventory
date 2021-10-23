@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="row justify-content-center mb-3">
+<div class="row justify-content-center">
     <div class="col-md-7">
         <div class="card mb-3">
             <div class="card-body">
@@ -34,9 +34,9 @@
     <div class="col-md-5">
         <div class="card mb-3">
             <div class="card-header">Posted By</div>
-            <div class="p-3">
+            <div class="pb-3 pt-4">
                 <a href="{{ url('users/' . $inventory->user->url) }}">
-                    <h5 class="text-center">{{ $inventory->user->name }}</h5>
+                    <h5 class="text-center mb-1">{{ $inventory->user->name }}</h5>
                 </a>
                 <div class="d-flex justify-content-center">
                     <small class="px-1">
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card mb-3">
             <div class="card-header">Comments</div>
             <div class="card-body">
                 e

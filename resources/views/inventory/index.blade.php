@@ -13,9 +13,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" name="search" placeholder="Zulrah">
+                                    <input type="text" class="form-control border-0" name="search" placeholder="Zulrah">
                                     <div class="input-group-append">
-                                      <input class="btn btn-success px-3" type="submit" value="Search" />
+                                      <input class="btn btn-primary px-3" type="submit" value="Search" />
                                     </div>
                                 </div>
                             </div>

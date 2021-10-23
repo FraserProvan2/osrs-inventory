@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-expand-md bg-secondary shadow-sm rounded py-3 mb-3">
+<nav class="navbar navbar-dark navbar-expand-md bg-primary shadow-sm rounded py-3 mb-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             OSRS Inventories

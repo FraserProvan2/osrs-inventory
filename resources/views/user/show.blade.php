@@ -6,7 +6,7 @@
             <div class="card mb-3">
                 <div class="pb-3 pt-4">
                     <a>
-                        <h5 class="text-center">{{ $user->name }}</h5>
+                        <h5 class="text-center mb-1">{{ $user->name }}</h5>
                     </a>
                     <div class="d-flex justify-content-center">
                         <small class="px-1">
@@ -61,6 +61,9 @@
                         <ul class="list-unstyled">
                             @foreach ($likes as $like)
                                 <li>
+                                    <span class="text-muted">
+                                        -
+                                    </span>
                                     <a href="{{ url('inventories/' . $like->id) }}">
                                         {{ $like->name }}
                                     </a>
