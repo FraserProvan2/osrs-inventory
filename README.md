@@ -11,6 +11,9 @@ lorem ipsum<br>
 ![](showcase/showcase.gif)
 
 lorem ipsum<br>
+![](showcase/controls.png)
+
+lorem ipsum<br>
 ![](showcase/item-details.png)
 
 lorem ipsum<br>
@@ -31,4 +34,15 @@ lorem ipsum<br>
 ![](showcase/liked.png)
 
 ## Installation
-lorem ipsum
+To get started with local development run the following in the root directory:
+1. `composer install`
+2. `npm install`
+
+A [Makefile](https://makefiletutorial.com/) is used as a utility file, that you can execute commands like:
+- Starting/Stop the local development server with
+##### `make up` 
+##### `make down` 
+- Run a watcher for compling JS 
+##### `make watch` 
+- Feature/Unit testing
+##### `make test` 
