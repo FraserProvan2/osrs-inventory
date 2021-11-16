@@ -40,9 +40,8 @@ To get started with local development run the following in the root directory:
 
 A [Makefile](https://makefiletutorial.com/) is used as a utility file, that you can execute commands like:
 - Starting/Stop the local development server with
-#### `make up` 
-#### `make down` 
+    #### `make up` / `make down` 
 - Run a watcher for compling JS 
-#### `make watch` 
+    #### `make watch` 
 - Feature/Unit testing
-#### `make test` 
+    #### `make test` 
