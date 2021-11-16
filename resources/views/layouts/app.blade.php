@@ -14,6 +14,16 @@
     <script src="https://use.fontawesome.com/165a97784e.js"></script>
     <script type="text/javascript" src="https://www.osrsbox.com/osrsbox-tooltips/osrsbox-tooltips.js" defer></script>
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W9P29MLXE"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5W9P29MLXE');
+    </script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">

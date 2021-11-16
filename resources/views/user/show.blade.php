@@ -47,7 +47,6 @@
             
                     @else
                         <div class="text-muted text-center p-2">
-                            <i class="fa fa-exclamation" aria-hidden="true"></i>
                              User has no intenvories
                         </div>
                     @endif

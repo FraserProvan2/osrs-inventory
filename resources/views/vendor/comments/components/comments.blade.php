@@ -7,7 +7,7 @@
 @endphp
 
 @if($comments->count() < 1)
-    <div class="text-muted text-center p-4"><i class="fa fa-exclamation" aria-hidden="true"></i> @lang('comments::comments.there_are_no_comments')</div>
+    <div class="text-muted text-center p-4">@lang('comments::comments.there_are_no_comments')</div>
 @endif
 
 <div class="py-2">
